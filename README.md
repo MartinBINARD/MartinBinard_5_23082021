@@ -3,9 +3,9 @@
 
 ***An e-commerce website called Orinoco***
 
-![logo-orinoco](./Front-end/img/Orinoco-logo.png)
+![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #1**
+**Main branch - Commit #3**
 
 # Description
 
@@ -19,7 +19,9 @@
 
 # Change done
 
-* Add index.html, .gitignore
+* Add Navbar
+* Add carousel with compressed img
+* Add basic album & footer
 
 # WEBSITE LINK
 
