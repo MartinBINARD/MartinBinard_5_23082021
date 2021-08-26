@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #3**
+**Main branch - Commit #4**
 
 # Description
 
@@ -19,10 +19,10 @@
 
 # Change done
 
-* Add Navbar
-* Add carousel with compressed img
-* Add basic album & footer
+* Add website link
+* Add public & sass repository
+* Add card item page
 
 # WEBSITE LINK
 
-* None
+[Orinoco](https://martinbinard.github.io/MartinBinard_5_23082021/Front-end/)

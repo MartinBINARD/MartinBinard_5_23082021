@@ -5,24 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orinoco - boutique artisanale en ligne</title>
-    <link rel="icon" href="img/Orinoco-logo.png">
+    <link rel="icon" href="public/img/Orinoco-logo.png">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <!-- Loading font awesome icons -->
     <script src="https://kit.fontawesome.com/5595c213a6.js" crossorigin="anonymous"></script>
     <!-- homemade css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 <body>
     <!-- HEADER -->
     <header>
 
-        <nav class="orinoco-style nav navbar-dark">
+        <nav class="nav bg-dark">
             <div class="container">
                 <ul class="nav justify-content-between">
                     <li>
-                        <a href="#" class="navbar-brand d-flex">
-                            <img src="img/Orinoco-logo.png" alt="Orinoco logo" width="auto" height="auto">
+                        <a href="#" class="navbar-brand d-flex orinoco-style text-white">
+                            <img src="public/img/Orinoco-logo.png" alt="Orinoco logo" width="auto" height="auto">
                             Orinoco
                         </a>
                     </li>
@@ -41,19 +41,19 @@
         <div class=" orinoco-style carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="img/slider1.jpg" class="slider-img d-block w-100" alt="...">
+              <img src="public/img/slider1.jpg" class="slider-img d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h1>Première boutique en ligne qui propose une vaste collection d'objets rares</h1>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/slider2.jpg" class="slider-img d-block w-100" alt="...">
+              <img src="public/img/slider2.jpg" class="slider-img d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h1>Des pièces uniques réparées dans nos propres ateliers</h1>              
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/slider3.jpg" class="slider-img d-block w-100" alt="...">
+              <img src="public/img/slider3.jpg" class="slider-img d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h1>Des experts à l'écoute de vos envies</h1>
               </div>
@@ -67,87 +67,77 @@
           <div class="container">
       
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <!-- CARD1 -->
               <div class="col">
-                <div class="card shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card shadow-sm border-0">
+                  <img src="public/img/vcam_1_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien">
       
                   <div class="card-body">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
-                      <small class="text-muted">9 mins</small>
+                      <a type="button" href="card.html" class="btn btn-sm btn-outline-secondary">Voir le produit</a>
+                      <h2>40€</h2>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- CARD2 -->
               <div class="col">
-                <div class="card shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card shadow-sm border-0">
+                  <img src="public/img/vcam_2_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien">
       
                   <div class="card-body">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
-                      <small class="text-muted">9 mins</small>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Voir le produit</button>
+                      <h2>40€</h2>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- CARD3 -->
               <div class="col">
-                <div class="card shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card shadow-sm border-0">
+                  <img src="public/img/vcam_3_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien">
       
                   <div class="card-body">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
-                      <small class="text-muted">9 mins</small>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Voir le produit</button>
+                      <h2>40€</h2>
                     </div>
                   </div>
                 </div>
               </div>
-      
+              <!-- CARD4 -->
               <div class="col">
-                <div class="card shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card shadow-sm border-0">
+                  <img src="public/img/vcam_4_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien">
       
                   <div class="card-body">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
-                      <small class="text-muted">9 mins</small>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Voir le produit</button>
+                      <h2>40€</h2>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- CARD5 -->
               <div class="col">
-                <div class="card shadow-sm">
-                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <div class="card shadow-sm border-0">
+                  <img src="public/img/vcam_5_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien" height="225px">
       
                   <div class="card-body">
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
-                      <small class="text-muted">9 mins</small>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Voir le produit</button>
+                      <h2>40€</h2>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -155,16 +145,15 @@
       
     </main>
     <!-- FOOTER -->
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 border-top bg-dark">
         
-        <div class="col-md-4 d-flex align-items-center ms-5">
-          <span class="text-muted">Made by <a href="https://github.com/MartinBINARD">Martin</a></span>
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="text-white">Made by <a class="text-success" href="https://github.com/MartinBINARD">Martin</a></span>
         </div>
     
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+          <li class="ms-3"><a class="text-white" href="https://twitter.com/BinardMartin"><i class="fab fa-social fa-twitter"></i><use xlink:href="#twitter"/></svg></a></li>
+          <li class="ms-3"><a class="text-white" href="https://github.com/MartinBINARD"><i class="fab fa-social fa-github"></i><use xlink:href="#github"/></svg></a></li>
         </ul>
 
     </footer>

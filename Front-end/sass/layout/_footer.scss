@@ -1,0 +1,11 @@
+.fa-social {
+    font-size: 25px;
+}
+
+.fa-twitter:hover {
+    color: rgb(29, 155, 240);
+}
+
+.fa-github:hover {
+    @extend %icon-shadow-orinoco;
+}

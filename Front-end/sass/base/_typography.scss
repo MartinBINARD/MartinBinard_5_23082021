@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+.orinoco-style {
+    font-family: 'Finger Paint', cursive;
+    font-size: 30px;
+}
+
+.fa-shopping-cart {
+    font-size: 20px;
+    color: white;
+    &:hover {
+        @extend %icon-shadow-orinoco;
+    }
+}
