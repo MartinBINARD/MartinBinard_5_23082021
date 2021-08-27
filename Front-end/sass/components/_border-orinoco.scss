@@ -1,0 +1,7 @@
+$orinoco-gradient: linear-gradient(to right, #e68a08, #8f5bfe);
+
+.border-orinoco {
+    background: $orinoco-gradient;
+    height: 2px;
+    width: 100%;
+}

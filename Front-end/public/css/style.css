@@ -4,12 +4,22 @@
   font-size: 30px;
 }
 
-.fa-shopping-cart {
+.cart {
   font-size: 20px;
   color: white;
 }
-.fa-github:hover, .fa-shopping-cart:hover {
+.cart:hover {
+  color: #8f5bfe;
+}
+
+.fa-github:hover, .cart:hover {
   text-shadow: 2px 4px 20px #ffffff;
+}
+
+.border-orinoco {
+  background: linear-gradient(to right, #e68a08, #8f5bfe);
+  height: 2px;
+  width: 100%;
 }
 
 .fa-social {

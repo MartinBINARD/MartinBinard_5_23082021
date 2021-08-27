@@ -5,10 +5,11 @@
     font-size: 30px;
 }
 
-.fa-shopping-cart {
+.cart {
     font-size: 20px;
     color: white;
     &:hover {
+        color: #8f5bfe;
         @extend %icon-shadow-orinoco;
     }
 }

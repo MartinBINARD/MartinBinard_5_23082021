@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #4**
+**Main branch - Commit #5**
 
 # Description
 
@@ -19,9 +19,9 @@
 
 # Change done
 
-* Add website link
-* Add public & sass repository
-* Add card item page
+* Add Add cart.html
+* Add new style to card.html
+* Add new stylish border to nav & footer
 
 # WEBSITE LINK
 
