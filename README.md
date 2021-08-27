@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #5**
+**Main branch - Commit #6**
 
 # Description
 
@@ -19,9 +19,8 @@
 
 # Change done
 
-* Add Add cart.html
-* Add new style to card.html
-* Add new stylish border to nav & footer
+* Add responsive table in cart.html
+* Remove HMTL W3C errors
 
 # WEBSITE LINK
 
