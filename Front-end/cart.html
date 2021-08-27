@@ -38,102 +38,102 @@
     <!-- MAIN -->
     <main>
         <section class="d-flex align-items-center justify-content-center bg-dark">
-            <div class="container my-5 py-5 rounded bg-light">
-                <a href="index.html" class="btn btn-sm btn-outline-secondary mb-2">Retour</a>
-                <div class="table-responsive-sm">
-                    <table class="table table-bordered">
-                        <thead>
-                          <tr>
-                            <th>Produit</th>
-                            <th>Option</th>
-                            <th>Quantité</th>
-                            <th>Supprimer</th>
-                            <th>Prix</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>nom du produit</td>
-                            <td>option 1</td>
-                            <td>1</td>
-                            <td><button class="btn btn-light remove-item"><i class="fas fa-trash-alt"></i></button></td>
-                            <td>40€</td>
-                          </tr>
-                        </tbody>
-                        <tfoot>
-                          <tr>
-                            <td colspan="3"></td>
-                            <th class="table-secondary">Total</th>
-                            <th class="table-secondary">40€</th>
-                          </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </div>
+          <div class="container my-5 py-5 rounded bg-light">
+              <a href="index.html" class="btn btn-sm btn-outline-secondary mb-2">Retour</a>
+              <div class="table-responsive-sm">
+                  <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Produit</th>
+                          <th>Option</th>
+                          <th>Quantité</th>
+                          <th>Supprimer</th>
+                          <th>Prix</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>nom du produit</td>
+                          <td>option 1</td>
+                          <td>1</td>
+                          <td><button class="btn btn-light remove-item"><i class="fas fa-trash-alt"></i></button></td>
+                          <td>40€</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="3"></td>
+                          <th class="table-secondary">Total</th>
+                          <th class="table-secondary">40€</th>
+                        </tr>
+                      </tfoot>
+                  </table>
+              </div>
+          </div>
         </section>
         <section class="d-flex align-items-stretch justify-content-center bg-dark">
-            <div class="container my-5 py-5 rounded bg-light">
-            <!-- FORM -->
-                <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-md-6">
-                      <label for="validationCustom01" class="form-label">Prénom</label>
-                      <input type="text" class="form-control" id="validationCustom01" placeholder="Entrez votre prénom" required>
-                      <div class="valid-feedback">
-                        Bravo!
-                      </div>
+          <div class="container my-5 py-5 rounded bg-light">
+          <!-- FORM -->
+              <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-6">
+                    <label for="validationCustom01" class="form-label">Prénom</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Entrez votre prénom" required>
+                    <div class="valid-feedback">
+                      Bravo!
                     </div>
-                    <div class="col-md-6">
-                      <label for="validationCustom02" class="form-label">NOM</label>
-                      <input type="text" class="form-control" id="validationCustom02" placeholder="Entrez votre nom" required>
-                      <div class="valid-feedback">
-                        Bravo!
-                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">NOM</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Entrez votre nom" required>
+                    <div class="valid-feedback">
+                      Bravo!
                     </div>
-                    <div class="col-md-6">
-                      <label for="validationCustom03" class="form-label">Ville</label>
-                      <input type="text" class="form-control" id="validationCustom03" placeholder="Paris" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">Ville</label>
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="Paris" required>
+                    <div class="invalid-feedback">
+                      Veuillez entre le nom d'une ville.
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                      <label for="validationCustom04" class="form-label">Pays</label>
+                      <input type="text" class="form-control" id="validationCustom04" placeholder="France" required>
                       <div class="invalid-feedback">
-                        Veuillez entre le nom d'une ville.
+                        Veuillez entre le pays.
                       </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="validationCustom05" class="form-label">Code postal</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="75000" required>
+                    <div class="invalid-feedback">
+                      Veuillez entre le code postal.
                     </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom03" class="form-label">Pays</label>
-                        <input type="text" class="form-control" id="validationCustom03" placeholder="France" required>
-                        <div class="invalid-feedback">
-                          Veuillez entre le pays.
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                      <label for="validationCustom04" class="form-label">Code postal</label>
-                      <input type="text" class="form-control" id="validationCustom04" placeholder="75000" required>
+                  </div>
+                  <div class="col-12">
+                      <label for="validationCustom06" class="form-label">e-mail</label>
+                      <input type="text" class="form-control" id="validationCustom06" placeholder="adresse@email.com" required>
                       <div class="invalid-feedback">
-                        Veuillez entre le code postal.
+                        Veuillez entre votre e-mail.
                       </div>
                     </div>
-                    <div class="col-12">
-                        <label for="validationCustom05" class="form-label">e-mail</label>
-                        <input type="text" class="form-control" id="validationCustom05" placeholder="adresse@email.com" required>
-                        <div class="invalid-feedback">
-                          Veuillez entre votre e-mail.
-                        </div>
-                      </div>
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck">
-                          J'adère aux CGU.
-                        </label>
-                        <div class="invalid-feedback">
-                          Vous devez accepter les CGU.
-                        </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        J'adère aux CGU.
+                      </label>
+                      <div class="invalid-feedback">
+                        Vous devez accepter les CGU.
                       </div>
                     </div>
-                    <div class="col-12">
-                      <button class="btn btn-outline-secondary" type="submit">Commander</button>
-                    </div>
-                </form>
-              <!-- FORM END -->
-            </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-outline-secondary" type="submit">Commander</button>
+                  </div>
+              </form>
+            <!-- FORM END -->
+          </div>
         </section>
     </main>
     <!-- FOOTER -->
