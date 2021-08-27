@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #8**
+**Main branch - Commit #9**
 
 # Description
 
@@ -19,7 +19,7 @@
 
 # Change done
 
-* Remove id conflict in form. 
+* Add a new div to eliminate W3C error section. 
 
 # WEBSITE LINK
 
