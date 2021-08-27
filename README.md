@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #10**
+**Main branch - Commit #11**
 
 # Description
 
@@ -19,7 +19,7 @@
 
 # Change done
 
-* Add 1 section to cart.html to eliminate W3C error section. 
+* Remove all sections to eliminate W3c errors. 
 
 # WEBSITE LINK
 
