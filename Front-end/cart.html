@@ -39,27 +39,33 @@
     <main>
         <section class="d-flex align-items-center justify-content-center bg-dark">
             <div class="container my-5 py-5 rounded bg-light">
-                <a type="button" href="index.html" class="btn btn-sm btn-outline-secondary mb-2">Retour</a>
+                <a href="index.html" class="btn btn-sm btn-outline-secondary mb-2">Retour</a>
                 <div class="table-responsive-sm">
                     <table class="table table-bordered">
                         <thead>
+                          <tr>
                             <th>Produit</th>
                             <th>Option</th>
                             <th>Quantité</th>
                             <th>Supprimer</th>
                             <th>Prix</th>
+                          </tr>
                         </thead>
                         <tbody>
+                          <tr>
                             <td>nom du produit</td>
                             <td>option 1</td>
                             <td>1</td>
                             <td><button class="btn btn-light remove-item"><i class="fas fa-trash-alt"></i></button></td>
                             <td>40€</td>
+                          </tr>
                         </tbody>
                         <tfoot>
+                          <tr>
                             <td colspan="3"></td>
                             <th class="table-secondary">Total</th>
                             <th class="table-secondary">40€</th>
+                          </tr>
                         </tfoot>
                     </table>
                 </div>
@@ -98,8 +104,8 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                      <label for="validationCustom05" class="form-label">Code postal</label>
-                      <input type="text" class="form-control" id="validationCustom05" placeholder="75000" required>
+                      <label for="validationCustom04" class="form-label">Code postal</label>
+                      <input type="text" class="form-control" id="validationCustom04" placeholder="75000" required>
                       <div class="invalid-feedback">
                         Veuillez entre le code postal.
                       </div>

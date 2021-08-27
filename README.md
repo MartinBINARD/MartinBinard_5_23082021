@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #6**
+**Main branch - Commit #7**
 
 # Description
 
@@ -19,8 +19,7 @@
 
 # Change done
 
-* Add responsive table in cart.html
-* Remove HMTL W3C errors
+* Remove HMTL W3C errors again
 
 # WEBSITE LINK
 
