@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #1**
+**index-JS - Commit #2**
 
 # Description
 
@@ -19,7 +19,8 @@
 
 # Change done
 
-* Add error loading server message in index.html
+* Call API
+* Load items in index.html
 
 # WEBSITE LINK
 
