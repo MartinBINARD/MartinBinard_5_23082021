@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #12**
+**index-JS - Commit #1**
 
 # Description
 
@@ -19,10 +19,7 @@
 
 # Change done
 
-* Add Back-end repository.
-* Remove unnecessary folders & files.
-* Add empty index.js.
-* Add cart.html on order button.
+* Add error loading server message in index.html
 
 # WEBSITE LINK
 
