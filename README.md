@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #2**
+**index-JS - Commit #3**
 
 # Description
 
@@ -19,8 +19,8 @@
 
 # Change done
 
-* Call API
-* Load items in index.html
+* Add items layout on main page.
+* Add each item for each card.
 
 # WEBSITE LINK
 

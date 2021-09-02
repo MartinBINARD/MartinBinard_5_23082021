@@ -1,6 +1,6 @@
 // CODE APPROVED
 // Message data server error
-const error = function() {
+const serverError = function() {
     let mainContent = document.getElementById('main-content');
     mainContent.innerHTML = "<div><p>Oups! Le serveur est actuellement indisponible. Veuillez lancer le serveur local (Port 3000) avec les commandes 'npm install' puis 'node server.js'.</p></div>";
     mainContent.classList.add("text-white");
@@ -37,10 +37,10 @@ function getItems() {
                 }
             });
         } else {
-            error();
+          serverError();
         }
     })
+    .catch(error => alert("Erreur: " + error));
 }
-
 
 getItems()
