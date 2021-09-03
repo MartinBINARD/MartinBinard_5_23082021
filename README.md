@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #4**
+**index-JS - Commit #5**
 
 # Description
 
@@ -19,8 +19,7 @@
 
 # Change done
 
-* Reorganize fetch method.
-* Add item name in card index.html.
+* Add for loop into the first datas function.
 
 # WEBSITE LINK
 

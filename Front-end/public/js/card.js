@@ -48,13 +48,10 @@ function getCardItem () {
             "<button type='button' class='btn btn-sm btn-outline-secondary ms-3'>Ajouter au panier</button>"+
             "<a href='cart.html' class='btn btn-sm btn-outline-secondary ms-3'>Commander</a>"+
         "</div>";
-    })
-    .then(datas =>{
-        // console.log(datas.lenses)
-        for(let lense of datas.lenses) {
-            let options = document.createElement('options');
-            options.innerHTML += "<option value='"+lense+"'>"+lense+"</option>";
-            document.getElementById('options-list').appendChild(options);
+        const itemLenses = datas.lenses;
+        console.log(itemLenses)
+        for(let lense of itemLenses) {
+            document.getElementById('options-list').innerHTML += "<option value='"+lense+"'>"+lense+"</option>";
         }
     })
     .catch(error => alert(error))
