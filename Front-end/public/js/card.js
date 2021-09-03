@@ -1,8 +1,12 @@
+// Notify the loss of server connexion
+
 const serverError = function() {
     let cardContent = document.getElementById('card-content');
     cardContent.innerHTML = "<div><p>Oups! Le serveur est actuellement indisponible. Veuillez lancer le serveur local (Port 3000) avec les commandes 'npm install' puis 'node server.js'.</p></div>";
     cardContent.classList.add("text-dark");
 }
+
+// Display the item carateristic
 
 function getCardItem () {
     console.log(window.location.search);
@@ -58,3 +62,5 @@ function getCardItem () {
 }
 
 getCardItem()
+
+// LOCAL STORAGE

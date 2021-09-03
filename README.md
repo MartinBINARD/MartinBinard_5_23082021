@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #5**
+**index-JS - Commit #6**
 
 # Description
 
@@ -19,7 +19,7 @@
 
 # Change done
 
-* Add for loop into the first datas function.
+* Add cart item number in cart icon.
 
 # WEBSITE LINK
 

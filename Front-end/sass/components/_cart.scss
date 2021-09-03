@@ -1,0 +1,23 @@
+.cart {
+    position: relative;
+    font-size: 35px;
+    color: white;
+    &:hover {
+        color: #8f5bfe;
+        @extend %icon-shadow-orinoco;
+    }
+}
+
+.add-cart{
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    right: 0.5rem;
+    top: 0.5rem;
+    text-align: center;
+    background-color: #e68a08;
+    border-radius: 500px;
+    height: 1.4rem;
+    width: 1.4rem;
+}
