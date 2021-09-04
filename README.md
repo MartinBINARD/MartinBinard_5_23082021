@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #6**
+**index-JS - Commit #7**
 
 # Description
 
@@ -19,7 +19,7 @@
 
 # Change done
 
-* Add cart item number in cart icon.
+* Add addTocArt event button to store customer choice in values.
 
 # WEBSITE LINK
 

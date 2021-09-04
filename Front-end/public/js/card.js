@@ -9,11 +9,11 @@ const serverError = function() {
 // Display the item carateristic
 
 function getCardItem () {
-    console.log(window.location.search);
+    // console.log(window.location.search);
     const URLend = new URLSearchParams(window.location.search);
-    console.log(URLend);
+    // console.log(URLend);
     const id = URLend.get("id");
-    console.log(id);
+    // console.log(id);
 
     const URL = "http://localhost:3000/api/cameras/"+id;
     fetch(URL)
@@ -25,7 +25,7 @@ function getCardItem () {
         }
     })
     .then(datas => {
-        console.log(datas.lenses)
+        // console.log(datas.lenses)
         document.getElementById("card-content").innerHTML = 
         "<div class='text-center'>"+
             "<img class='img-fluid rounded' src='"+datas.imageUrl+"' alt='appareil photo années 60'>"+
@@ -49,18 +49,39 @@ function getCardItem () {
             "</select>"+
         "</div>"+
         "<div class='d-flex align-items-center my-3'>"+
-            "<button type='button' class='btn btn-sm btn-outline-secondary ms-3'>Ajouter au panier</button>"+
+            "<button type='button' class='btn btn-sm btn-outline-secondary ms-3' id='button'>Ajouter au panier</button>"+
             "<a href='cart.html' class='btn btn-sm btn-outline-secondary ms-3'>Commander</a>"+
         "</div>";
+        // Loop display item options
         const itemLenses = datas.lenses;
-        console.log(itemLenses)
+        // console.log(itemLenses)
         for(let lense of itemLenses) {
             document.getElementById('options-list').innerHTML += "<option value='"+lense+"'>"+lense+"</option>";
         }
+
+        // LOCAL STORAGE
+
+        // Add to cart listener button
+        const buttonAddToCart = document.getElementById('button');
+
+        buttonAddToCart.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Store option selected
+            const optionChoice = document.getElementById('options-list').value;
+            console.log(optionChoice);
+            
+            // Get item values selected
+            let itemValues = {
+                itemName : datas.name,
+                itemId : datas._id,
+                itemOptions : optionChoice,
+                itemQuantity : 1,
+                itemPrice: datas.price/1000
+            }
+            console.log(itemValues);
+        });
     })
     .catch(error => alert(error))
 }
 
-getCardItem()
-
-// LOCAL STORAGE
+getCardItem();
