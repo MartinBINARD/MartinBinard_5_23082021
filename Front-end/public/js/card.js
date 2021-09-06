@@ -59,8 +59,6 @@ function getCardItem () {
             document.getElementById('options-list').innerHTML += "<option value='"+lense+"'>"+lense+"</option>";
         }
 
-        // LOCAL STORAGE
-
         // Add to cart listener button
         const buttonAddToCart = document.getElementById('button');
 
@@ -79,6 +77,29 @@ function getCardItem () {
                 itemPrice: datas.price/1000
             }
             console.log(itemValues);
+
+            // LOCAL STORAGE
+            // Store localStorage varaible into js varaiable
+            let storeItem = JSON.parse(localStorage.getItem("item"));
+            console.log(storeItem);
+            // check if an item is already stored
+            if(!storeItem){
+                storeItem = [];
+            }
+            // Store js varaible into localstorage
+            storeItem.push(itemValues);
+            localStorage.setItem("item", JSON.stringify(storeItem));
+            // Display the total number of items into carts icon
+            
+            let countItemCart = document.getElementById('button');
+            const numberItemInfo = document.createElement("div");
+            numberItemInfo.classList.add("add-cart");
+
+            for(let itemWholeQuantity in storeItem){
+                numberItemInfo.innerText = itemWholeQuantity;
+            }
+            document.getElementById("cart-link").appendChild(numberItemInfo);
+
         });
     })
     .catch(error => alert(error))

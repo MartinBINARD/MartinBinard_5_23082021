@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #7**
+**index-JS - Commit #8**
 
 # Description
 
@@ -19,7 +19,7 @@
 
 # Change done
 
-* Add addTocArt event button to store customer choice in values.
+* Add item customer choice into local storage
 
 # WEBSITE LINK
 
