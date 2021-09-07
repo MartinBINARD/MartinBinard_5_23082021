@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #8**
+**index-JS - Commit #9**
 
 # Description
 
@@ -19,7 +19,8 @@
 
 # Change done
 
-* Add item customer choice into local storage
+* Add main.js to every page.
+* Reorganize functions.
 
 # WEBSITE LINK
 
