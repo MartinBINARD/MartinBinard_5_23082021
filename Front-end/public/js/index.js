@@ -1,10 +1,5 @@
-// TEST
-// fetch('http://localhost:3000/api/cameras')
-//     .then(res.json())
-//     .then(data => photo.src = data[0].imageUrl)
-
-// ON DEVELOPMENT
-const items = document.getElementById('items')
+// Display whole items
+getItems();
 
 function getItems() {
     fetch('http://localhost:3000/api/cameras')
@@ -16,7 +11,7 @@ function getItems() {
         }
     })
     .then(datas => {
-      console.log(datas)
+      // console.log(datas)
       for (let data of datas) {
           document.getElementById('main-content').innerHTML += "<div class='col'>"+
           "<div class='card shadow-sm border-0'>"+
@@ -36,5 +31,3 @@ function getItems() {
     })
     .catch(error => alert(error));
 }
-
-getItems()

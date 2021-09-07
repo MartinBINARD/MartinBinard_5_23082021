@@ -15,7 +15,7 @@ function getCardItem () {
         }
     })
     .then(datas => {
-        // console.log(datas.lenses)
+        // console.log(datas.name)
         document.getElementById("main-content").innerHTML = 
         "<div class='text-center'>"+
             "<img class='img-fluid rounded' src='"+datas.imageUrl+"' alt='appareil photo années 60'>"+
@@ -39,8 +39,7 @@ function getCardItem () {
             "</select>"+
         "</div>"+
         "<div class='d-flex align-items-center my-3'>"+
-            "<button type='button' class='btn btn-sm btn-outline-secondary ms-3' id='buttonAddToCart'>Ajouter au panier</button>"+
-            "<a href='cart.html' class='btn btn-sm btn-outline-secondary ms-3'>Commander</a>"+
+            "<button type='button' class='btn btn-sm btn-outline-secondary ms-3' data-bs-toggle='modal' data-bs-target='#cartModal' id='buttonAddToCart'>Ajouter au panier</button>"+
         "</div>";
         // Loop display item options
         const itemLenses = datas.lenses;
@@ -55,31 +54,10 @@ function getCardItem () {
         buttonAddToCart.addEventListener('click', (e) => {
             e.preventDefault();
             addItem();
+            showNumberOfItem();
         });
     })
     .catch(error => alert(error))
-}
-
-//get product id
-function getProductId() {
-	const URLend = new URLSearchParams(window.location.search);
-	return URLend.get("id");
-}
-
-// Display the total number of items into carts icon
-function showNumberOfItem() {     
-    let countItemCart = document.getElementById('buttonAddToCart');
-    const numberItemInfo = document.createElement("div");
-    numberItemInfo.classList.add("add-cart");
-    
-    let storeItem = JSON.parse(localStorage.getItem("item"));
-    let numberItem = 0;
-
-    for(let indexInArray in storeItem){
-        numberItem += parseInt(storeItem[indexInArray].itemQuantity);
-    }
-    numberItemInfo.innerText = numberItem;
-    document.getElementById("cart-link").appendChild(numberItemInfo);
 }
 
 function addItem() {
@@ -91,6 +69,7 @@ function addItem() {
         itemQuantity : document.getElementById('productQty').value,
         itemPrice: document.getElementById('productPrice').value,
     }
+    // console.log(itemValues.itemName);
     // LOCAL STORAGE
     // Store localStorage varaible into js varaiable
     let storeItem = JSON.parse(localStorage.getItem("item"));
@@ -101,5 +80,4 @@ function addItem() {
     // Store js varaible into localstorage
     storeItem.push(itemValues);
     localStorage.setItem("item", JSON.stringify(storeItem));
-    showNumberOfItem();
 }
