@@ -12,6 +12,9 @@
     <script src="https://kit.fontawesome.com/5595c213a6.js" crossorigin="anonymous"></script>
     <!-- homemade css -->
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <!-- JS display -->
+    <script async src="public/js/main.js"></script>
+    <script async src="public/js/index.js"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -27,7 +30,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="cart.html" class="nav-link cart mt-1"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="cart.html" class="nav-link cart mt-1" id="cart-link">
+                          <i class="fas fa-shopping-cart"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -63,79 +68,8 @@
       <!-- ALBUM -->
       <div class="album py-5 bg-dark">
         <div class="container">
-    
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <!-- CARD1 -->
-            <div class="col">
-              <div class="card shadow-sm border-0">
-                <img src="public/img/vcam_1_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien">
-    
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="card.html" class="btn btn-sm btn-outline-secondary">Voir le produit</a>
-                    <p class="fs-4">40€</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- CARD2 -->
-            <div class="col">
-              <div class="card shadow-sm border-0">
-                <img src="public/img/vcam_2_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien">
-    
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="card.html" class="btn btn-sm btn-outline-secondary">Voir le produit</a>
-                    <p class="fs-4">40€</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- CARD3 -->
-            <div class="col">
-              <div class="card shadow-sm border-0">
-                <img src="public/img/vcam_3_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien">
-    
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="card.html" class="btn btn-sm btn-outline-secondary">Voir le produit</a>
-                    <p class="fs-4">40€</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- CARD4 -->
-            <div class="col">
-              <div class="card shadow-sm border-0">
-                <img src="public/img/vcam_4_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien">
-    
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="card.html" class="btn btn-sm btn-outline-secondary">Voir le produit</a>
-                    <p class="fs-4">40€</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- CARD5 -->
-            <div class="col">
-              <div class="card shadow-sm border-0">
-                <img src="public/img/vcam_5_thumbnail.jpg" class="card-img-top" alt="appareil photo ancien">
-    
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <a href="card.html" class="btn btn-sm btn-outline-secondary">Voir le produit</a>
-                    <p class="fs-4">40€</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="main-content">
+            <!-- CONTENT -->
           </div>
         </div>
       </div>

@@ -4,12 +4,3 @@
     font-family: 'Finger Paint', cursive;
     font-size: 30px;
 }
-
-.cart {
-    font-size: 20px;
-    color: white;
-    &:hover {
-        color: #8f5bfe;
-        @extend %icon-shadow-orinoco;
-    }
-}

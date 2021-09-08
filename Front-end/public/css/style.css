@@ -4,14 +4,6 @@
   font-size: 30px;
 }
 
-.cart {
-  font-size: 20px;
-  color: white;
-}
-.cart:hover {
-  color: #8f5bfe;
-}
-
 .fa-github:hover, .cart:hover {
   text-shadow: 2px 4px 20px #ffffff;
 }
@@ -20,6 +12,29 @@
   background: linear-gradient(to right, #e68a08, #8f5bfe);
   height: 2px;
   width: 100%;
+}
+
+.cart {
+  position: relative;
+  font-size: 30px;
+  color: white;
+}
+.cart:hover {
+  color: #8f5bfe;
+}
+
+.add-cart {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  right: 0.5rem;
+  top: 0.5rem;
+  text-align: center;
+  background-color: #e68a08;
+  border-radius: 500px;
+  height: 1.4rem;
+  width: 1.4rem;
 }
 
 .fa-social {
