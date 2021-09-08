@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #10**
+**index-JS - Commit #11**
 
 # Description
 
@@ -19,8 +19,7 @@
 
 # Change done
 
-* Add function in main.js to refresh the number of item icon.
-* Add modal window to confirm item order.
+* Rename id values
 
 # WEBSITE LINK
 
