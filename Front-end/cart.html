@@ -45,7 +45,7 @@
       <div class="d-flex align-items-center justify-content-center bg-dark">
         <div class="container my-5 py-5 rounded bg-light">
             <a href="index.html" class="btn btn-sm btn-outline-secondary mb-2">Retour</a>
-            <div class="table-responsive-sm">
+            <div class="table-responsive-sm" id="cart-content">
                 <table class="table table-bordered">
                     <thead>
                       <tr>
@@ -56,20 +56,14 @@
                         <th>Prix</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>nom du produit</td>
-                        <td>option 1</td>
-                        <td>1</td>
-                        <td><button class="btn btn-light remove-item"><i class="fas fa-trash-alt"></i></button></td>
-                        <td>40€</td>
-                      </tr>
+                    <tbody id="cart-item">
+                      <!-- CART ITEM -->
                     </tbody>
                     <tfoot>
                       <tr>
                         <td colspan="3"></td>
                         <th class="table-secondary">Total</th>
-                        <th class="table-secondary">40€</th>
+                        <th class="table-secondary">Montant en €</th>
                       </tr>
                     </tfoot>
                 </table>

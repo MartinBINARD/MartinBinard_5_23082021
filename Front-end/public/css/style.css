@@ -14,9 +14,13 @@
   width: 100%;
 }
 
+.orinoco-stripe {
+  background: linear-gradient(to right, #e68a08, #8f5bfe);
+}
+
 .cart {
   position: relative;
-  font-size: 30px;
+  font-size: 35px;
   color: white;
 }
 .cart:hover {

@@ -3,9 +3,9 @@
 
 ***An e-commerce website called Orinoco***
 
-![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
+![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #12**
+**Main branch - Commit #13**
 
 # Description
 
@@ -19,7 +19,8 @@
 
 # Change done
 
-* Add textContent to string itemValues
+* Add customer items values in cart table.
+* Add empty cart.
 
 # WEBSITE LINK
 

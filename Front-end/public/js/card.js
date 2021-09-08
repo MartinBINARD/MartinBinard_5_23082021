@@ -51,6 +51,18 @@ function getCardItem () {
     .catch(error => alert(error))
 }
 
+function getItemButtonCart() {
+    // Add to cart listener button
+    const buttonAddToCart = document.getElementById('buttonAddToCart');
+
+    buttonAddToCart.addEventListener('click', (e) => {
+        e.preventDefault();
+        addItem();
+        showNumberOfItem();
+    });
+}
+
+// ADD ITEM TO LOCAL STORAGE
 function addItem() {
     // Get item values selected
     let itemValues = {
@@ -70,15 +82,4 @@ function addItem() {
     // Store js varaible into localstorage
     storeItem.push(itemValues);
     localStorage.setItem("item", JSON.stringify(storeItem));
-}
-
-function getItemButtonCart() {
-    // Add to cart listener button
-    const buttonAddToCart = document.getElementById('buttonAddToCart');
-
-    buttonAddToCart.addEventListener('click', (e) => {
-        e.preventDefault();
-        addItem();
-        showNumberOfItem();
-    });
 }
