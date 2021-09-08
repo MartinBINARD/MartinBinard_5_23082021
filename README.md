@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/img/Orinoco-logo-title.png)
 
-**index-JS - Commit #11**
+**index-JS - Commit #12**
 
 # Description
 
@@ -19,7 +19,7 @@
 
 # Change done
 
-* Rename id values
+* Add textContent to string itemValues
 
 # WEBSITE LINK
 
