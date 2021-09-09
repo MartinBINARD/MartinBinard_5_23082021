@@ -22,7 +22,10 @@ function getCardItem () {
         <div class='card-body mx-3'>
             <div class='d-flex justify-content-between align-items-center'>
               <div class='card-title fs-3' id='itemName'>${datas.name}</div>
-              <div class='card-title pricing-card-title fs-4' id='itemPrice'>${datas.price/1000}€</div>
+              <div class='d-flex align-items-center fs-4'>
+                <div id='itemPrice'>${datas.price/1000}</div>
+                <div>€</div>
+              </div>
             </div>
         <div class='row mx-3'>
             <p class='card-text'>${datas.description}</p>

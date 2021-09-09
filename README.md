@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #13**
+**Main branch - Commit #14**
 
 # Description
 
@@ -19,8 +19,10 @@
 
 # Change done
 
-* Add customer items values in cart table.
-* Add empty cart.
+* Add discard button function.
+* Add total order price.
+* Add multiply item quantity with price of each item.
+* Remove € price in localstorage item.
 
 # WEBSITE LINK
 
