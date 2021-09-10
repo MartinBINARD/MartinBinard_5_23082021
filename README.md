@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #14**
+**Main branch - Commit #15**
 
 # Description
 
@@ -19,10 +19,7 @@
 
 # Change done
 
-* Add discard button function.
-* Add total order price.
-* Add multiply item quantity with price of each item.
-* Remove € price in localstorage item.
+* Add serverError in catch
 
 # WEBSITE LINK
 

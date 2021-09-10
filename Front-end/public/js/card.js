@@ -8,12 +8,7 @@ function getCardItem () {
     const URL = "http://localhost:3000/api/cameras/"+id;
     fetch(URL)
     .then(response => {
-        if(response.ok) {
-            return response.json();
-        } else {
-            serverError();
-        }
-    })
+        if(response.ok) {return response.json();}})
     .then(datas => {
         document.getElementById("main-content").innerHTML = 
         `<div class='text-center'>
@@ -51,7 +46,8 @@ function getCardItem () {
         }
         getItemButtonCart()
     })
-    .catch(error => alert(error))
+    .catch(serverError())
+    // .catch(error => alert(error))
 }
 
 function getItemButtonCart() {
