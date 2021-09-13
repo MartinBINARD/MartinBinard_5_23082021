@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #16**
+**Main branch - Commit #17**
 
 # Description
 
@@ -19,9 +19,9 @@
 
 # Change done
 
-* Add test name regexp
-* Add refresh page to cart-order.html when discarding item.
-* Rename cart.html to cart-order.html
+* Add filter to localstorage item in order to delete twice IDs.
+* Add condition to totalPrice order, fixing empty cart bug after removing the least item.
+* Fix serverError message bug when server shutdown.
 
 # WEBSITE LINK
 

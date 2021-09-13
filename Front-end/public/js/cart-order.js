@@ -3,6 +3,7 @@ removeItemToCart();
 getInputForm();
 
 function addItemToCart() {
+    let storeItem = JSON.parse(localStorage.getItem("item"));
     // Check if cart is empty and display each item cart row
     displayRowItemCart();
 
@@ -59,16 +60,20 @@ function displayTotalOrderPrice () {
     // Add Price by row
     let totalRowOrder = 0;
     let totalOrderTable = [];
+    let totalPrice = 0;
 
     for(let i in storeItem) {
         let totalRowOrder = parseInt(storeItem[i].itemPrice)*(storeItem[i].itemQuantity);
         totalOrderTable.push(totalRowOrder);
     }
 
-    // Addition of table price values
-    const reducer = (previousValue, currentValue) => previousValue + currentValue;
-    let totalPrice = totalOrderTable.reduce(reducer,0);
-    document.getElementById("total-order").innerText = totalPrice + "€";
+    //check if empty
+    if(totalOrderTable.length > 0) {
+        // Addition of table price values
+        const reducer = (previousValue, currentValue) => previousValue + currentValue;
+        let totalPrice = totalOrderTable.reduce(reducer,0);
+        document.getElementById("total-order").innerText = totalPrice + "€";
+    }
 }
 
 function getInputForm () {

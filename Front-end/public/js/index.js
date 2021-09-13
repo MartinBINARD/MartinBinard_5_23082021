@@ -4,12 +4,7 @@ getItems();
 function getItems() {
     fetch('http://localhost:3000/api/cameras')
     .then(response => {
-        if(response.ok) {
-            return response.json();
-        } else {
-          serverError();
-        }
-    })
+      if(response.ok) {return response.json();}})
     .then(datas => {
       // console.log(datas)
       for (let data of datas) {
@@ -29,5 +24,5 @@ function getItems() {
         "</div>";
       }
     })
-    .catch(error => alert(error));
+    .catch(() => serverError());
 }
