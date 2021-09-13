@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #15**
+**Main branch - Commit #16**
 
 # Description
 
@@ -19,7 +19,9 @@
 
 # Change done
 
-* Add serverError in catch
+* Add test name regexp
+* Add refresh page to cart-order.html when discarding item.
+* Rename cart.html to cart-order.html
 
 # WEBSITE LINK
 

@@ -1,5 +1,6 @@
 addItemToCart();
 removeItemToCart();
+getInputForm();
 
 function addItemToCart() {
     // Check if cart is empty and display each item cart row
@@ -20,12 +21,10 @@ function removeItemToCart() {
             
             // delete the id element of the array in local storage
             let storeItemId = storeItem[i].itemId;
-            console.log(storeItemId);
             storeItem = storeItem.filter(id => id.itemId !== storeItemId);
-            console.log(storeItem);
-
+            
             localStorage.setItem("item", JSON.stringify(storeItem));
-            window.location.href = "card.html";
+            window.location.href = "cart-order.html";
         })
     }
 }
@@ -69,5 +68,28 @@ function displayTotalOrderPrice () {
     // Addition of table price values
     const reducer = (previousValue, currentValue) => previousValue + currentValue;
     let totalPrice = totalOrderTable.reduce(reducer,0);
-    document.getElementById("total-order").innerText = totalPrice + " €";
+    document.getElementById("total-order").innerText = totalPrice + "€";
+}
+
+function getInputForm () {
+
+    let form = document.getElementById("signUp");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let name = document.getElementById("name");
+        console.log(name);
+        console.log(name.value);
+
+        let nameRegexp = new RegExp("^[A-Za-z]$");
+        let validName = nameRegexp.test(name.value);
+
+        if (validName) {
+            console.log("good");
+        } else {
+            console.log("bad");
+        }
+    })
+    
 }
