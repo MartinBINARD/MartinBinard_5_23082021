@@ -80,21 +80,77 @@ function getInputForm () {
 
     let form = document.getElementById("signUp");
 
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", e => {
         e.preventDefault();
 
-        let name = document.getElementById("name");
-        console.log(name);
-        console.log(name.value);
+        // firstname
+        let firstNameRegexp = new RegExp("^[A-Za-z]{3,30}$");
+        let validFirstName = firstNameRegexp.test(document.getElementById("first-name").value);
 
-        let nameRegexp = new RegExp("^[A-Za-z]$");
-        let validName = nameRegexp.test(name.value);
-
-        if (validName) {
-            console.log("good");
+        if (validFirstName) {
+            console.log("valid first name");
         } else {
-            console.log("bad");
+            console.log("wrong first name");
+        }
+        
+        // firstname
+        let lastNameRegexp = new RegExp("^[A-Za-z]{3,30}$");
+        let validLastName = lastNameRegexp.test(document.getElementById("last-name").value);
+
+        if (validLastName) {
+            console.log("valid last name");
+        } else {
+            console.log("wrong last name");
+        }
+
+        // address
+        let addressRegexp = new RegExp("^[a-zA-Z0-9\s]{2,30}$");
+        let validAddress = addressRegexp.test(document.getElementById("address").value);
+
+        if (validAddress) {
+            console.log("valid address");
+        } else {
+            console.log("wrong address");
+        }
+
+        // city
+        let cityRegexp = new RegExp("^[A-Za-z]{3,30}$");
+        let validCity = cityRegexp.test(document.getElementById("last-name").value);
+
+        if (validCity) {
+            console.log("valid city");
+        } else {
+            console.log("wrong city");
+        }
+
+        // country
+        let countryRegexp = new RegExp("[a-zA-Z]{2,20}");
+        let validCountry = countryRegexp.test(document.getElementById("country").value);
+
+        if (validCountry) {
+            console.log("valid country");
+        } else {
+            console.log("wrong country");
+        }
+
+        // zip code
+        let zipRegexp = new RegExp("[0-9]{5}");
+        let validZip = zipRegexp.test(document.getElementById("zipCode").value);
+
+        if (validZip) {
+            console.log("valid zip code");
+        } else {
+            console.log("wrong zip code");
+        }
+
+        // email
+        let emailRegexp = new RegExp("^(([^<>()\[\]\\.,;:\s@]+(\.[^<>()\[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$");
+        let validEmail = emailRegexp.test(document.getElementById("email").value);
+
+        if (validEmail) {
+            console.log("valid email");
+        } else {
+            console.log("bad email");
         }
     })
-    
 }

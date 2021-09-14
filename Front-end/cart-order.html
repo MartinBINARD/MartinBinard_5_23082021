@@ -73,53 +73,60 @@
       <div class="d-flex align-items-stretch justify-content-center bg-dark">
         <div class="container my-5 py-5 rounded bg-light">
         <!-- FORM -->
-            <form class="row g-3 needs-validation" id="signUp">
-                <div class="col-md-6">
-                  <label for="name" class="form-label">Prénom</label>
-                  <input type="text" class="form-control" id="name" placeholder="Entrez votre prénom" required>
-                  <div class="invalid-feedback">
-                    Veuillez entrer votre Prénom.
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <label for="surname" class="form-label">NOM</label>
-                  <input type="text" class="form-control" id="surname" placeholder="Entrez votre nom" required>
-                  <div class="invalid-feedback">
-                    Veuillez entrer votre nom.
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <label for="city" class="form-label">Ville</label>
-                  <input type="text" class="form-control" id="city" placeholder="Paris" required>
-                  <div class="invalid-feedback">
-                    Veuillez entre le nom d'une ville.
-                  </div>
-                </div>
-                <div class="col-md-3">
-                    <label for="country" class="form-label">Pays</label>
-                    <input type="text" class="form-control" id="country" placeholder="France" required>
-                    <div class="invalid-feedback">
-                      Veuillez entre le pays.
-                    </div>
-                </div>
-                <div class="col-md-3">
-                  <label for="zipCode" class="form-label">Code postal</label>
-                  <input type="text" class="form-control" id="zipCode" placeholder="75000" required>
-                  <div class="invalid-feedback">
-                    Veuillez entre le code postal.
-                  </div>
-                </div>
-                <div class="col-12">
-                    <label for="email" class="form-label">e-mail</label>
-                    <input type="text" class="form-control" id="email" placeholder="adresse@email.com" required>
-                    <div class="invalid-feedback">
-                      Veuillez entre votre e-mail.
-                    </div>
-                  </div>
-                <div class="col-12">
-                  <button class="btn btn-outline-secondary" type="submit" id="order">Commander</button>
-                </div>
-            </form>
+          <form class="row g-3 needs-validation" id="signUp">
+            <div class="col-md-6">
+              <label for="first-name" class="form-label">Prénom</label>
+              <input type="text" class="form-control" id="first-name" placeholder="Entrez votre prénom" required>
+              <div class="invalid-feedback">
+                Veuillez entrer votre Prénom.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="last-name" class="form-label">NOM</label>
+              <input type="text" class="form-control" id="last-name" placeholder="Entrez votre nom" required>
+              <div class="invalid-feedback">
+                Veuillez entrer votre nom.
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Adresse</label>
+              <input type="text" class="form-control" id="address" placeholder="N°, Rue, Appartement..." required>
+              <div class="invalid-feedback">
+                Veuillez entre votre adresse.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="city" class="form-label">Ville</label>
+              <input type="text" class="form-control" id="city" placeholder="Paris" required>
+              <div class="invalid-feedback">
+                Veuillez entre le nom d'une ville.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="country" class="form-label">Pays</label>
+              <input type="text" class="form-control" id="country" placeholder="France" required>
+              <div class="invalid-feedback">
+                Veuillez entre le pays.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="zipCode" class="form-label">Code postal</label>
+              <input type="text" class="form-control" id="zipCode" placeholder="75000" required>
+              <div class="invalid-feedback">
+                Veuillez entre le code postal.
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label">e-mail</label>
+              <input type="text" class="form-control" id="email" placeholder="adresse@email.com" required>
+              <div class="invalid-feedback">
+                Veuillez entre votre e-mail.
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-outline-secondary" type="submit" id="order">Commander</button>
+            </div>
+          </form>
           <!-- FORM END -->
         </div>
       </div>
