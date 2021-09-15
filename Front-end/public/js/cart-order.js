@@ -1,6 +1,7 @@
 addItemToCart();
 removeItemToCart();
 getInputForm();
+// sendDatasToServer();
 
 function addItemToCart() {
     let storeItem = JSON.parse(localStorage.getItem("item"));
@@ -85,72 +86,62 @@ function getInputForm () {
 
         // firstname
         let firstNameRegexp = new RegExp("^[A-Za-z]{3,30}$");
-        let validFirstName = firstNameRegexp.test(document.getElementById("first-name").value);
-
-        if (validFirstName) {
-            console.log("valid first name");
-        } else {
-            console.log("wrong first name");
-        }
+        let firstNameValue = document.getElementById("first-name").value;
+        let validFirstName = firstNameRegexp.test(firstNameValue);
         
         // firstname
         let lastNameRegexp = new RegExp("^[A-Za-z]{3,30}$");
-        let validLastName = lastNameRegexp.test(document.getElementById("last-name").value);
-
-        if (validLastName) {
-            console.log("valid last name");
-        } else {
-            console.log("wrong last name");
-        }
+        let lastNameValue = document.getElementById("last-name").value;
+        let validLastName = lastNameRegexp.test(lastNameValue);
 
         // address
-        let addressRegexp = new RegExp("^[a-zA-Z0-9\s]{2,30}$");
-        let validAddress = addressRegexp.test(document.getElementById("address").value);
-
-        if (validAddress) {
-            console.log("valid address");
-        } else {
-            console.log("wrong address");
-        }
+        let addressRegexp = new RegExp("^[0-9A-Za-z\s]{2,30}$");
+        let addressValue = document.getElementById("address").value
+        let validAddress = addressRegexp.test(addressValue);
+        console.log("adresse");
+        console.log(validAddress);
 
         // city
         let cityRegexp = new RegExp("^[A-Za-z]{3,30}$");
-        let validCity = cityRegexp.test(document.getElementById("last-name").value);
-
-        if (validCity) {
-            console.log("valid city");
-        } else {
-            console.log("wrong city");
-        }
+        let cityValue = document.getElementById("last-name").value;
+        let validCity = cityRegexp.test(cityValue);
 
         // country
         let countryRegexp = new RegExp("[a-zA-Z]{2,20}");
-        let validCountry = countryRegexp.test(document.getElementById("country").value);
-
-        if (validCountry) {
-            console.log("valid country");
-        } else {
-            console.log("wrong country");
-        }
+        let countryValue = document.getElementById("country").value;
+        let validCountry = countryRegexp.test(countryValue);
 
         // zip code
         let zipRegexp = new RegExp("[0-9]{5}");
-        let validZip = zipRegexp.test(document.getElementById("zipCode").value);
-
-        if (validZip) {
-            console.log("valid zip code");
-        } else {
-            console.log("wrong zip code");
-        }
+        let zipValue = document.getElementById("zipCode").value;
+        let validZip = zipRegexp.test(zipValue);
 
         // email
         let emailRegexp = new RegExp("^(([^<>()\[\]\\.,;:\s@]+(\.[^<>()\[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$");
-        let validEmail = emailRegexp.test(document.getElementById("email").value);
+        let emailValue = document.getElementById("email").value;
+        let validEmail = emailRegexp.test(emailValue);
 
-        if (validEmail) {
-            console.log("valid email");
+        if (validFirstName && validLastName && validAddress && validCity && validCountry && validZip && validEmail) {
+            let storeItem = JSON.parse(localStorage.getItem("item"));
+            let storeItemId = [];
+            
+            for(let i in storeItem) {
+                storeItemId.push(storeItem[i].itemId);
+            }
+
+            const orderInfo = {
+                contact: {
+                    firstName: firstNameValue,
+                    lastName: lastNameValue,
+                    address: addressValue,
+                    city: cityValue,
+                    email: emailValue
+                },
+                product: storeItemId
+            };
+            console.log(orderInfo);
         } else {
-            console.log("bad email");
+            document.getElementById("warning-form").innerText = "Champs incorrects. Veuillez corriger le formulaire.";
         }
     })
 }

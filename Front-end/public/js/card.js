@@ -80,7 +80,7 @@ function addItem() {
 
     //Remove in local storage product with same id as the one that we want to add
     storeItem = storeItem.filter(id => id.itemId !== itemValues.itemId);
-    
+
     // Store js varaible into localstorage
     storeItem.push(itemValues);
     localStorage.setItem("item", JSON.stringify(storeItem));

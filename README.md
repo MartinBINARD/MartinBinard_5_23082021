@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #18**
+**Main branch - Commit #19**
 
 # Description
 
@@ -19,7 +19,8 @@
 
 # Change done
 
-* Add Regexp to form
+* Add order form object ready to send to server.
+* Create validation.html page.
 
 # WEBSITE LINK
 
