@@ -1,7 +1,5 @@
 addItemToCart();
 removeItemToCart();
-getInputForm();
-// sendDatasToServer();
 
 function addItemToCart() {
     let storeItem = JSON.parse(localStorage.getItem("item"));
@@ -68,80 +66,11 @@ function displayTotalOrderPrice () {
         totalOrderTable.push(totalRowOrder);
     }
 
-    //check if empty
+    //check if cart item is empty to prevent totalPriceItem bug
     if(totalOrderTable.length > 0) {
         // Addition of table price values
         const reducer = (previousValue, currentValue) => previousValue + currentValue;
         let totalPrice = totalOrderTable.reduce(reducer,0);
         document.getElementById("total-order").innerText = totalPrice + "€";
     }
-}
-
-function getInputForm () {
-
-    let form = document.getElementById("signUp");
-
-    form.addEventListener("submit", e => {
-        e.preventDefault();
-
-        // firstname
-        let firstNameRegexp = new RegExp("^[A-Za-z]{3,30}$");
-        let firstNameValue = document.getElementById("first-name").value;
-        let validFirstName = firstNameRegexp.test(firstNameValue);
-        
-        // firstname
-        let lastNameRegexp = new RegExp("^[A-Za-z]{3,30}$");
-        let lastNameValue = document.getElementById("last-name").value;
-        let validLastName = lastNameRegexp.test(lastNameValue);
-
-        // address
-        let addressRegexp = new RegExp("^[0-9A-Za-z\s]{2,30}$");
-        let addressValue = document.getElementById("address").value
-        let validAddress = addressRegexp.test(addressValue);
-        console.log("adresse");
-        console.log(validAddress);
-
-        // city
-        let cityRegexp = new RegExp("^[A-Za-z]{3,30}$");
-        let cityValue = document.getElementById("last-name").value;
-        let validCity = cityRegexp.test(cityValue);
-
-        // country
-        let countryRegexp = new RegExp("[a-zA-Z]{2,20}");
-        let countryValue = document.getElementById("country").value;
-        let validCountry = countryRegexp.test(countryValue);
-
-        // zip code
-        let zipRegexp = new RegExp("[0-9]{5}");
-        let zipValue = document.getElementById("zipCode").value;
-        let validZip = zipRegexp.test(zipValue);
-
-        // email
-        let emailRegexp = new RegExp("^(([^<>()\[\]\\.,;:\s@]+(\.[^<>()\[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$");
-        let emailValue = document.getElementById("email").value;
-        let validEmail = emailRegexp.test(emailValue);
-
-        if (validFirstName && validLastName && validAddress && validCity && validCountry && validZip && validEmail) {
-            let storeItem = JSON.parse(localStorage.getItem("item"));
-            let storeItemId = [];
-            
-            for(let i in storeItem) {
-                storeItemId.push(storeItem[i].itemId);
-            }
-
-            const orderInfo = {
-                contact: {
-                    firstName: firstNameValue,
-                    lastName: lastNameValue,
-                    address: addressValue,
-                    city: cityValue,
-                    email: emailValue
-                },
-                product: storeItemId
-            };
-            console.log(orderInfo);
-        } else {
-            document.getElementById("warning-form").innerText = "Champs incorrects. Veuillez corriger le formulaire.";
-        }
-    })
 }

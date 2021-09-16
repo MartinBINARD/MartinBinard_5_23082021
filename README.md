@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #19**
+**Main branch - Commit #20**
 
 # Description
 
@@ -19,8 +19,9 @@
 
 # Change done
 
-* Add order form object ready to send to server.
-* Create validation.html page.
+* Add fetch POST to server.
+* Add orderId to localStorage.
+* Add validation.js
 
 # WEBSITE LINK
 
