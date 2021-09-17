@@ -13,8 +13,7 @@
     <!-- homemade css -->
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <!-- JS display -->
-    <script async src="public/js/main.js"></script>
-    <script async src="public/js/card.js"></script>
+    <script async src="public/js/validation.js"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -22,19 +21,10 @@
 
         <nav class="nav bg-dark">
             <div class="container">
-                <ul class="nav justify-content-between">
-                    <li>
-                        <a href="index.html" class="navbar-brand d-flex orinoco-style text-white">
-                          <img src="public/img/Orinoco-logo.png" alt="Orinoco logo">
-                            Orinoco
-                        </a>
-                    </li>
-                    <li>
-                        <a href="cart-order.html" class="nav-link cart mt-1" id="cart-link">
-                          <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                </ul>
+              <a href="index.html" class="navbar-brand d-flex orinoco-style text-white">
+                <img src="public/img/Orinoco-logo.png" alt="Orinoco logo">
+                  Orinoco
+              </a>
             </div>
         </nav>
         <div class="border-orinoco"></div>
@@ -45,13 +35,13 @@
     <main>
 
       <div class="d-flex align-items-stretch justify-content-center bg-dark py-5">
-        <div class="container my-3 py-3 rounded bg-light" style="max-width: 34rem;">
+        <div class="container my-3 py-3 rounded bg-light">
           <a href="index.html" class="btn btn-sm btn-outline-secondary mb-5 mx-3">Retourner sur la page d'acceuil</a>
           <div class="card-fluid" id="main-content">
             <!-- VALIDATION CONTENT -->
-            <h2>Votre commande a bien été validée! Merci de faire confiance à Orinoco!</h2>
-            <div>Votre numéro de commande est le <span id="validation-order"></span></div>
-            <div>Le montant de votre de commande est de <span id="total-validation-order"></span>€</div>
+            <h2>Votre commande a bien été validée ! Merci pour votre confiance !</h2>
+            <p>Votre numéro de commande : <span class="fw-bold" id="validation-order"></span></p>
+            <p>Le montant total de votre de commande est de <span class="fw-bold" id="total-validation-order"></span>€</p>
           </div>
         </div>
       </div>

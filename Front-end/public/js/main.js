@@ -17,7 +17,7 @@ function showNumberOfItem() {
     let storeItem = JSON.parse(localStorage.getItem("item"));
     let numberItem = 0;
 
-    for(let indexInArray in storeItem){
+    for(let indexInArray in storeItem) {
         numberItem += parseInt(storeItem[indexInArray].itemQuantity);
     }
     numberItemInfo.innerText = numberItem;

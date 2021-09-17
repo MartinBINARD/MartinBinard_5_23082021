@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #20**
+**Main branch - Commit #21**
 
 # Description
 
@@ -19,9 +19,9 @@
 
 # Change done
 
-* Add fetch POST to server.
-* Add orderId to localStorage.
-* Add validation.js
+* Add DisplayOrderValidation to validation.js.
+* Add returnToHome function, to prevent validation page reload.
+* Move getInputForm function to cart-order.js.
 
 # WEBSITE LINK
 

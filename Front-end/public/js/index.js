@@ -1,3 +1,6 @@
+// Clear sessionStorage after displaying order validation page
+sessionStorage.clear();
+
 // Display whole items
 getItems();
 
@@ -6,7 +9,7 @@ function getItems() {
     .then(response => {
       if(response.ok) {return response.json();}})
     .then(datas => {
-      // console.log(datas)
+
       for (let data of datas) {
           document.getElementById('main-content').innerHTML += "<div class='col'>"+
           "<div class='card shadow-sm border-0'>"+
@@ -23,6 +26,7 @@ function getItems() {
           "</div>"+
         "</div>";
       }
+
     })
     .catch(() => serverError());
 }
