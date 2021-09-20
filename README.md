@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #21**
+**Main branch - Commit #22**
 
 # Description
 
@@ -19,9 +19,8 @@
 
 # Change done
 
-* Add DisplayOrderValidation to validation.js.
-* Add returnToHome function, to prevent validation page reload.
-* Move getInputForm function to cart-order.js.
+* Add Uppercase & lowercase accent regex to firstname & lastname forms.
+* Add purple buttons orinoco theme.
 
 # WEBSITE LINK
 

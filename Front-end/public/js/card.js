@@ -36,7 +36,7 @@ function getCardItem () {
                 </select>
             </div>
             <div class='d-flex align-items-center my-3'>
-                <button type='button' class='btn btn-sm btn-outline-secondary ms-3' data-bs-toggle='modal' data-bs-target='#cartModal' id='buttonAddToCart'>Ajouter au panier</button>
+                <button type='button' class='btn fw-bold button-orinoco ms-3' data-bs-toggle='modal' data-bs-target='#cartModal' id='buttonAddToCart'>Ajouter au panier</button>
             </div>`;
             // Loop display item options
             const itemLenses = datas.lenses;

@@ -89,31 +89,31 @@ function getInputForm () {
         e.preventDefault();
 
         // Check firstname form
-        let firstNameRegexp = new RegExp("^[A-Za-z]{3,30}$");
+        let firstNameRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
         let firstNameValue = document.getElementById("first-name").value;
         let validFirstName = firstNameRegexp.test(firstNameValue);
         console.log(firstNameValue);
         console.log(typeof(firstNameValue));
 
         // Check firstname form
-        let lastNameRegexp = new RegExp("^[A-Za-z]{3,30}$");
+        let lastNameRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
         let lastNameValue = document.getElementById("last-name").value;
         let validLastName = lastNameRegexp.test(lastNameValue);
 
         // Check address form
-        let addressRegexp = new RegExp("^[0-9A-Za-z\s]{2,30}$");
+        let addressRegexp = new RegExp("^[0-9A-Za-zÀ-ú\s]{2,30}$");
         let addressValue = document.getElementById("address").value
         let validAddress = addressRegexp.test(addressValue);
         console.log("adresse");
         console.log(validAddress);
 
         // Check city form
-        let cityRegexp = new RegExp("^[A-Za-z]{3,30}$");
+        let cityRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
         let cityValue = document.getElementById("last-name").value;
         let validCity = cityRegexp.test(cityValue);
 
         // Check country form
-        let countryRegexp = new RegExp("[a-zA-Z]{2,20}");
+        let countryRegexp = new RegExp("[a-zA-ZÀ-ú]{2,20}");
         let countryValue = document.getElementById("country").value;
         let validCountry = countryRegexp.test(countryValue);
 

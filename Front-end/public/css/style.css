@@ -18,6 +18,16 @@
   background: linear-gradient(to right, #e68a08, #8f5bfe);
 }
 
+.button-orinoco {
+  color: #8f5bfe;
+  border: 2px solid #8f5bfe;
+  padding: 0.5rem;
+}
+.button-orinoco:hover {
+  color: white;
+  background-color: #8f5bfe;
+}
+
 .cart {
   position: relative;
   font-size: 35px;
