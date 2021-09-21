@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #22**
+**Main branch - Commit #23**
 
 # Description
 
@@ -19,8 +19,7 @@
 
 # Change done
 
-* Add Uppercase & lowercase accent regex to firstname & lastname forms.
-* Add purple buttons orinoco theme.
+* Remove Back end repo to prevent Git Kraken licence restrictions.
 
 # WEBSITE LINK
 
