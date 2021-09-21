@@ -77,53 +77,38 @@
             <div class="col-md-6">
               <label for="first-name" class="form-label">Prénom</label>
               <input type="text" class="form-control" id="first-name" placeholder="Entrez votre prénom" required>
-              <div class="invalid-feedback">
-                Veuillez entrer votre Prénom.
-              </div>
+              <div class="col-12 text-danger" id="warning-first-name"></div>
             </div>
             <div class="col-md-6">
               <label for="last-name" class="form-label">NOM</label>
               <input type="text" class="form-control" id="last-name" placeholder="Entrez votre nom" required>
-              <div class="invalid-feedback">
-                Veuillez entrer votre nom.
-              </div>
+              <div class="col-12 text-danger" id="warning-last-name"></div>
             </div>
             <div class="col-12">
               <label for="address" class="form-label">Adresse</label>
               <input type="text" class="form-control" id="address" placeholder="N°, Rue, Appartement..." required>
-              <div class="invalid-feedback">
-                Veuillez entre votre adresse.
-              </div>
+              <div class="col-12 text-danger" id="warning-address"></div>
             </div>
             <div class="col-md-6">
               <label for="city" class="form-label">Ville</label>
               <input type="text" class="form-control" id="city" placeholder="Paris" required>
-              <div class="invalid-feedback">
-                Veuillez entre le nom d'une ville.
-              </div>
+              <div class="col-12 text-danger" id="warning-city"></div>
             </div>
             <div class="col-md-3">
               <label for="country" class="form-label">Pays</label>
               <input type="text" class="form-control" id="country" placeholder="France" required>
-              <div class="invalid-feedback">
-                Veuillez entre le pays.
-              </div>
+              <div class="col-12 text-danger" id="warning-country"></div>
             </div>
             <div class="col-md-3">
               <label for="zipCode" class="form-label">Code postal</label>
               <input type="text" class="form-control" id="zipCode" placeholder="75000" required>
-              <div class="invalid-feedback">
-                Veuillez entre le code postal.
-              </div>
+              <div class="col-12 text-danger" id="warning-zip-code"></div>
             </div>
             <div class="col-12">
               <label for="email" class="form-label">e-mail</label>
               <input type="text" class="form-control" id="email" placeholder="adresse@email.com" required>
-              <div class="invalid-feedback">
-                Veuillez entre votre e-mail.
-              </div>
+              <div class="col-12 text-danger" id="warning-email"></div>
             </div>
-            <div class="col-12 text-danger" id="warning-form"></div>
             <div class="col-12">
               <button class="btn fw-bold button-orinoco" type="submit" id="order">Commander</button>
             </div>

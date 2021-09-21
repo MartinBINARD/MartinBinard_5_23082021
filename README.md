@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #23**
+**Main branch - Commit #24**
 
 # Description
 
@@ -19,7 +19,9 @@
 
 # Change done
 
-* Remove Back end repo to prevent Git Kraken licence restrictions.
+* Add new Back end repo.
+* Add a split function checkAndSendToServer containing : Regexp form function & fetch post function.
+* Add warning error messages to each form field.
 
 # WEBSITE LINK
 

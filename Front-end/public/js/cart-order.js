@@ -1,6 +1,6 @@
 addItemToCart();
 removeItemToCart();
-getInputForm();
+checkAndSendToServer();
 
 function addItemToCart() {
     let storeItem = JSON.parse(localStorage.getItem("item"));
@@ -81,99 +81,129 @@ function displayTotalOrderPrice () {
     }
 }
 
-// Get input form, send it to server & get the orderID
-
-function getInputForm () {
-
+// Check order & send it to server
+function checkAndSendToServer () {
     document.getElementById("signUp").addEventListener("submit", e => {
         e.preventDefault();
 
-        // Check firstname form
-        let firstNameRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
-        let firstNameValue = document.getElementById("first-name").value;
-        let validFirstName = firstNameRegexp.test(firstNameValue);
-        console.log(firstNameValue);
-        console.log(typeof(firstNameValue));
-
-        // Check firstname form
-        let lastNameRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
-        let lastNameValue = document.getElementById("last-name").value;
-        let validLastName = lastNameRegexp.test(lastNameValue);
-
-        // Check address form
-        let addressRegexp = new RegExp("^[0-9A-Za-zÀ-ú\s]{2,30}$");
-        let addressValue = document.getElementById("address").value
-        let validAddress = addressRegexp.test(addressValue);
-        console.log("adresse");
-        console.log(validAddress);
-
-        // Check city form
-        let cityRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
-        let cityValue = document.getElementById("last-name").value;
-        let validCity = cityRegexp.test(cityValue);
-
-        // Check country form
-        let countryRegexp = new RegExp("[a-zA-ZÀ-ú]{2,20}");
-        let countryValue = document.getElementById("country").value;
-        let validCountry = countryRegexp.test(countryValue);
-
-        // Check zip code form
-        let zipRegexp = new RegExp("[0-9]{5}");
-        let zipValue = document.getElementById("zipCode").value;
-        let validZip = zipRegexp.test(zipValue);
-
-        // Check email form
-        let emailRegexp = new RegExp("^(([^<>()\[\]\\.,;:\s@]+(\.[^<>()\[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$");
-        let emailValue = document.getElementById("email").value;
-        let validEmail = emailRegexp.test(emailValue);
-
-        // Check the customer form & POST it to server
-        if (validFirstName && validLastName && validAddress && validCity && validCountry && validZip && validEmail) {
-            // Call the customer items choice in order to create an oject ready to send to server 
-            let storeItem = JSON.parse(localStorage.getItem("item"));
-            let storeItemId = [];
-            let storeOrderTotalPrice = [];
-            
-            for(let i in storeItem) {
-                storeItemId.push(storeItem[i].itemId);
-            }
-
-            const orderInfo = {
-                contact: {
-                    firstName: firstNameValue,
-                    lastName: lastNameValue,
-                    address: addressValue,
-                    city: cityValue,
-                    email: emailValue
-                },
-                products: storeItemId
-            };
-            console.log(orderInfo);
-            orderInfoJSON = JSON.stringify(orderInfo);
-            console.log(orderInfoJSON);
-            
-            // Send itemId & customer form to server, then send customer to the validation page
-            const sendToServer = fetch("http://localhost:3000/api/cameras/order", {
-                method: "POST",
-                headers: {"Content-Type" : "application/json"},
-                body: JSON.stringify(orderInfo)
-            })
-            .then(response => {
-                if(response.ok) {
-                    return response.json();
-                }
-                else (console.error(response.status))})
-            .then(returnResponse => {
-                console.log(returnResponse);
-                let storeOrderId = returnResponse.orderId;
-
-                // Store the order id to localStorage
-                localStorage.setItem("oderIdKey", JSON.stringify(storeOrderId));
-                window.location.href = "validation.html";
-            })
-
+        checkInputForm();
+        
+        if(checkInputForm() != false) {
+            sendOrderDatas();
         } else {
-            document.getElementById("warning-form").innerText = "Champs incorrects. Veuillez corriger le formulaire.";
+            document.getElementById("signUp").reset();
         }
+    })
+}
+
+// Check regexp input form
+function checkInputForm () {    
+    // Check firstname form
+    let firstNameRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
+    let validFirstName = firstNameRegexp.test(document.getElementById("first-name").value);
+    
+    // Check firstname form
+    let lastNameRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
+    let validLastName = lastNameRegexp.test(document.getElementById("last-name").value);
+    
+    // Check address form
+    let addressRegexp = new RegExp("^[0-9A-Za-zÀ-ú' ']{2,30}$");
+    let validAddress = addressRegexp.test(document.getElementById("address").value);
+    console.log("adresse");
+    console.log(validAddress);
+    
+    // Check city form
+    let cityRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
+    let validCity = cityRegexp.test(document.getElementById("city").value);
+    
+    // Check country form
+    let countryRegexp = new RegExp("[a-zA-ZÀ-ú]{2,20}");
+    let validCountry = countryRegexp.test(document.getElementById("country").value);
+    
+    // Check zip code form
+    let zipRegexp = new RegExp("[0-9]{5}");
+    let validZip = zipRegexp.test(document.getElementById("zipCode").value);
+    
+    // Check email form
+    let emailRegexp = new RegExp("^(([^<>()\[\]\\.,;:\s@]+(\.[^<>()\[\]\\.,;:\s@]+)*)|(.+))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$");
+    let validEmail = emailRegexp.test(document.getElementById("email").value);
+    
+    // Check the customer form
+    if (!validFirstName) {
+        document.getElementById("warning-first-name").innerText = "Prénom incorrect, 3 caractères minimum. Les accents sont autorisés.";
+        return false;
+    } else if (!validLastName) {
+        document.getElementById("warning-last-name").innerText = "Nom incorrect, 3 caractères minimum. Les accents sont autorisés.";
+        return false;
+    } else if (!validAddress) {
+        document.getElementById("warning-address").innerText = "Adresse incorrecte, 2 caractères minimum. Les numéro, espaces et accents sont autorisés.";
+        return false;
+    } else if (!validCity) {
+        document.getElementById("warning-city").innerText = "Ville incorrecte, 3 caractères minimum. Les accents sont autorisés.";
+        return false;
+    } else if (!validCountry) {
+        document.getElementById("warning-country").innerText = "Pays incorrect, 3 caractères minimum. Les accents sont autorisés.";
+        return false;
+    } else if (!validZip) {
+        document.getElementById("warning-zip-code").innerText = "Code postal incorrect. Le code postal doit contenir 5 chiffres sans espaces.";
+        return false;
+    } else if (!validEmail) {
+        document.getElementById("warning-email").innerText = "Adresse mail incorrecte.";
+        return false;
+    } else {
+        return true;
+    }
+}
+
+// Send it to server & get the orderID
+function sendOrderDatas () {
+    // Call the customer items choice in order to create an oject ready to send to server
+    let firstNameValue = document.getElementById("first-name").value;
+    let lastNameValue = document.getElementById("last-name").value;
+    let addressValue = document.getElementById("address").value;
+    let cityValue = document.getElementById("last-name").value;
+    let countryValue = document.getElementById("country").value;
+    let zipValue = document.getElementById("zipCode").value;
+    let emailValue = document.getElementById("email").value;
+
+    let storeItem = JSON.parse(localStorage.getItem("item"));
+    let storeItemId = [];
+    let storeOrderTotalPrice = [];
+    
+    for(let i in storeItem) {
+        storeItemId.push(storeItem[i].itemId);
+    }
+
+    const orderInfo = {
+        contact: {
+            firstName: firstNameValue,
+            lastName: lastNameValue,
+            address: addressValue,
+            city: cityValue,
+            email: emailValue
+        },
+        products: storeItemId
+    };
+    
+    console.log(orderInfo);
+    orderInfoJSON = JSON.stringify(orderInfo);
+    console.log(orderInfoJSON);
+    // Send itemId & customer form to server, then send customer to the validation page
+    const sendToServer = fetch("http://localhost:3000/api/cameras/order", {
+        method: "POST",
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify(orderInfo)
+    })
+    .then(response => {
+        if(response.ok) {
+            return response.json();
+        }
+        else (console.error(response.status))})
+    .then(returnResponse => {
+        console.log(returnResponse);
+        let storeOrderId = returnResponse.orderId;
+        // Store the order id to localStorage
+        localStorage.setItem("oderIdKey", JSON.stringify(storeOrderId));
+        window.location.href = "validation.html";
     })
 }
