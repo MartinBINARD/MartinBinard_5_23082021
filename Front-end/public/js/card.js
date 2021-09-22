@@ -5,7 +5,7 @@ getCardItem();
 function getCardItem () {
     const id = getProductId();
 
-    const URL = "http://localhost:3000/api/cameras/"+id;
+    const URL = `${apiURL}/api/cameras/`+id;
     fetch(URL)
         .then(response => {
             if(response.ok) {return response.json();}})

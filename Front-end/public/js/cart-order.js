@@ -130,25 +130,67 @@ function checkInputForm () {
     
     // Check the customer form
     if (!validFirstName) {
-        document.getElementById("warning-first-name").innerText = "Prénom incorrect, 3 caractères minimum. Les accents sont autorisés.";
+        document.getElementById("warning-first-name").classList.remove("d-none");
+        document.getElementById("warning-last-name").classList.add("d-none");
+        document.getElementById("warning-address").classList.add("d-none");
+        document.getElementById("warning-city").classList.add("d-none");
+        document.getElementById("warning-country").classList.add("d-none");
+        document.getElementById("warning-zip-code").classList.add("d-none");
+        document.getElementById("warning-email").classList.add("d-none");
         return false;
     } else if (!validLastName) {
-        document.getElementById("warning-last-name").innerText = "Nom incorrect, 3 caractères minimum. Les accents sont autorisés.";
+        document.getElementById("warning-first-name").classList.add("d-none");
+        document.getElementById("warning-last-name").classList.remove("d-none");
+        document.getElementById("warning-address").classList.add("d-none");
+        document.getElementById("warning-city").classList.add("d-none");
+        document.getElementById("warning-country").classList.add("d-none");
+        document.getElementById("warning-zip-code").classList.add("d-none");
+        document.getElementById("warning-email").classList.add("d-none");
         return false;
     } else if (!validAddress) {
-        document.getElementById("warning-address").innerText = "Adresse incorrecte, 2 caractères minimum. Les numéro, espaces et accents sont autorisés.";
+        document.getElementById("warning-first-name").classList.add("d-none");
+        document.getElementById("warning-last-name").classList.add("d-none");
+        document.getElementById("warning-address").classList.remove("d-none");
+        document.getElementById("warning-city").classList.add("d-none");
+        document.getElementById("warning-country").classList.add("d-none");
+        document.getElementById("warning-zip-code").classList.add("d-none");
+        document.getElementById("warning-email").classList.add("d-none");
         return false;
     } else if (!validCity) {
-        document.getElementById("warning-city").innerText = "Ville incorrecte, 3 caractères minimum. Les accents sont autorisés.";
+        document.getElementById("warning-first-name").classList.add("d-none");
+        document.getElementById("warning-last-name").classList.add("d-none");
+        document.getElementById("warning-address").classList.add("d-none");
+        document.getElementById("warning-city").classList.remove("d-none");
+        document.getElementById("warning-country").classList.add("d-none");
+        document.getElementById("warning-zip-code").classList.add("d-none");
+        document.getElementById("warning-email").classList.add("d-none");
         return false;
     } else if (!validCountry) {
-        document.getElementById("warning-country").innerText = "Pays incorrect, 3 caractères minimum. Les accents sont autorisés.";
+        document.getElementById("warning-first-name").classList.add("d-none");
+        document.getElementById("warning-last-name").classList.add("d-none");
+        document.getElementById("warning-address").classList.add("d-none");
+        document.getElementById("warning-city").classList.add("d-none");
+        document.getElementById("warning-country").classList.remove("d-none");
+        document.getElementById("warning-zip-code").classList.add("d-none");
+        document.getElementById("warning-email").classList.add("d-none");
         return false;
     } else if (!validZip) {
-        document.getElementById("warning-zip-code").innerText = "Code postal incorrect. Le code postal doit contenir 5 chiffres sans espaces.";
+        document.getElementById("warning-first-name").classList.add("d-none");
+        document.getElementById("warning-last-name").classList.add("d-none");
+        document.getElementById("warning-address").classList.add("d-none");
+        document.getElementById("warning-city").classList.add("d-none");
+        document.getElementById("warning-country").classList.add("d-none");
+        document.getElementById("warning-zip-code").classList.remove("d-none");
+        document.getElementById("warning-email").classList.add("d-none");
         return false;
-    } else if (!validEmail) {
-        document.getElementById("warning-email").innerText = "Adresse mail incorrecte.";
+    }else if (!validEmail) {
+        document.getElementById("warning-first-name").classList.add("d-none");
+        document.getElementById("warning-last-name").classList.add("d-none");
+        document.getElementById("warning-address").classList.add("d-none");
+        document.getElementById("warning-city").classList.add("d-none");
+        document.getElementById("warning-country").classList.add("d-none");
+        document.getElementById("warning-zip-code").classList.add("d-none");
+        document.getElementById("warning-email").classList.remove("d-none");
         return false;
     } else {
         return true;
@@ -189,7 +231,7 @@ function sendOrderDatas () {
     orderInfoJSON = JSON.stringify(orderInfo);
     console.log(orderInfoJSON);
     // Send itemId & customer form to server, then send customer to the validation page
-    const sendToServer = fetch("http://localhost:3000/api/cameras/order", {
+    const sendToServer = fetch(`${apiURL}/api/cameras/order`, {
         method: "POST",
         headers: {"Content-Type" : "application/json"},
         body: JSON.stringify(orderInfo)

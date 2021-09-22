@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #24**
+**Main branch - Commit #25**
 
 # Description
 
@@ -19,9 +19,8 @@
 
 # Change done
 
-* Add new Back end repo.
-* Add a split function checkAndSendToServer containing : Regexp form function & fetch post function.
-* Add warning error messages to each form field.
+* Add toggled warning field form messages.
+* Add api-config.js with distant heroku server. 
 
 # WEBSITE LINK
 

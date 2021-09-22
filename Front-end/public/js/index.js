@@ -5,7 +5,7 @@ sessionStorage.clear();
 getItems();
 
 function getItems() {
-    fetch('http://localhost:3000/api/cameras')
+    fetch(`${apiURL}/api/cameras`)
     .then(response => {
       if(response.ok) {return response.json();}})
     .then(datas => {
