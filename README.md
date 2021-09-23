@@ -5,7 +5,7 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #25**
+**Main branch - Commit #26**
 
 # Description
 
@@ -19,9 +19,29 @@
 
 # Change done
 
-* Add toggled warning field form messages.
-* Add api-config.js with distant heroku server. 
+* Add instruction in README.md.
+* Add new server error warning message.
+* Add item name & price alignment.
+* Add margin & remove padding to button-orinoco class.
 
 # WEBSITE LINK
 
 [Orinoco](https://martinbinard.github.io/MartinBinard_5_23082021/Front-end/)
+
+# How to run this website
+
+* You may experience heroku server hibernation when you first visit the website.
+* :pray: Please, take a time to reload multiples time the page to wake the heroku server.
+* Then enjoy it !!! :call_me_hand:
+* Otherwise, you can clone the back-end repo & replace the apiURL by the following code :
+```javascript
+let apiURL = 'http://localhost:3000';
+```
+* Install depedencies :
+```
+npm install
+```
+* Launch the node.js server :
+```
+node server.js
+```

@@ -15,8 +15,8 @@ function getCardItem () {
                 <img class='img-fluid rounded' src=${datas.imageUrl} alt='appareil photo années 60'>
             </div>
             <div class='card-body mx-3'>
-                <div class='d-flex justify-content-between align-items-center'>
-                  <div class='card-title fs-3' id='itemName'>${datas.name}</div>
+                <div class='card-title d-flex justify-content-between align-items-center'>
+                  <div class='fs-3' id='itemName'>${datas.name}</div>
                   <div class='d-flex align-items-center fs-4'>
                     <div id='itemPrice'>${datas.price/1000}</div>
                     <div>€</div>
@@ -36,7 +36,7 @@ function getCardItem () {
                 </select>
             </div>
             <div class='d-flex align-items-center my-3'>
-                <button type='button' class='btn fw-bold button-orinoco ms-3' data-bs-toggle='modal' data-bs-target='#cartModal' id='buttonAddToCart'>Ajouter au panier</button>
+                <button type='button' class='btn btn-sm fw-bold button-orinoco ms-3' data-bs-toggle='modal' data-bs-target='#cartModal' id='buttonAddToCart'>Ajouter au panier</button>
             </div>`;
             // Loop display item options
             const itemLenses = datas.lenses;

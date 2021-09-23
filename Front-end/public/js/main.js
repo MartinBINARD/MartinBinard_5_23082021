@@ -4,7 +4,7 @@ showNumberOfItem();
 // Message data server error
 const serverError = function() {
     let mainContent = document.getElementById('main-content');
-    mainContent.innerHTML = "<div class='container my-3 py-3 rounded bg-light' style='max-width: 34rem; height: 60vh'><div><p>Oups! Le serveur est actuellement indisponible. Veuillez lancer le serveur local (Port 3000) avec les commandes 'npm install' puis 'node server.js'.</p></div></div>";
+    mainContent.innerHTML = "<div class='container my-3 py-3 rounded bg-light' style='max-width: 34rem; height: 60vh'><p>Oups! Le serveur heroku est actuellement indisponible ou en hibernation. Veuillez recharger la page plusieurs fois.</p><p>Ou bien, remplacer la variable <span class='fw-bold>'let apiURL = 'http://localhost:3000''</span> située dans le fichier <span class='fw-bold>api-config.js</span>.<p> Veuillez lancer le serveur local (Port 3000) avec les commandes <span class='fw-bold>'npm install'</span> puis <span class='fw-bold>'node server.js'</span>.</p></div>";
     mainContent.classList.add("text-dark");
 }
 
