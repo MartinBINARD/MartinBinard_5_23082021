@@ -12,8 +12,8 @@ function getItems() {
 
       for (let data of datas) {
           document.getElementById('main-content').innerHTML += "<div class='col'>"+
-          "<div class='card shadow-sm border-0'>"+
-            "<img src='"+ data.imageUrl +"' alt='appareil photo ancien'>"+
+          "<div class='card shadow-sm border-0 rounded'>"+
+            "<img class='rounded-top' src='"+ data.imageUrl +"' alt='appareil photo ancien'>"+
   
             "<div class='card-body'>"+
               "<div class='card-title fs-3'>"+data.name+"</div>"+

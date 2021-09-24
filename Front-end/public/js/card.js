@@ -40,11 +40,11 @@ function getCardItem () {
             </div>`;
             // Loop display item options
             const itemLenses = datas.lenses;
-            // console.log(itemLenses)
+
             for(let lense of itemLenses) {
                 document.getElementById('options-list').innerHTML += "<option value='"+lense+"'>"+lense+"</option>";
             }
-            getItemButtonCart()
+            getItemButtonCart();
         })
         .catch(() => serverError());
 }

@@ -11,7 +11,8 @@ function addItemToCart() {
     displayTotalOrderPrice();
 }
 
-function removeItemToCart() {
+function removeItemToCart () {
+    // select all discard button in the HTML
     let discardButton = Array.from(document.querySelectorAll(".remove-item"));
 
     for(let i in discardButton) {
@@ -32,8 +33,8 @@ function removeItemToCart() {
 
 function displayRowItemCart () {
     let storeItem = JSON.parse(localStorage.getItem("item"));
-    console.log(storeItem);
-
+    
+    // If the localStorage is empty, do not display the table.
     if(!storeItem || storeItem == 0){
         document.getElementById("cart-content").innerHTML = `
         <div class='container my-3 py-3 fs-5 rounded bg-light text-center text-white orinoco-stripe'><div><p>Votre panier est vide</p></div></div>
@@ -58,9 +59,7 @@ function displayRowItemCart () {
 function displayTotalOrderPrice () {
     let storeItem = JSON.parse(localStorage.getItem("item"));
     // Add Price by row
-    let totalRowOrder = 0;
     let totalOrderTable = [];
-    let totalPrice = 0;
 
     for(let i in storeItem) {
         let totalRowOrder = parseInt(storeItem[i].itemPrice)*(storeItem[i].itemQuantity);
@@ -69,13 +68,10 @@ function displayTotalOrderPrice () {
 
     //check if cart item is empty to prevent totalPriceItem bug
     if(totalOrderTable.length > 0) {
-        let storeOrderTotalPrice = [];
-
         // Addition of table price values
         const reducer = (previousValue, currentValue) => previousValue + currentValue;
         let totalPrice = totalOrderTable.reduce(reducer,0);
         document.getElementById("total-order").innerText = totalPrice + "€";
-
         // Store Order Total Price to localstorage to display it in validation page later
         localStorage.setItem("orderTotalPrice",JSON.stringify(totalPrice));
     }
@@ -85,10 +81,11 @@ function displayTotalOrderPrice () {
 function checkAndSendToServer () {
     document.getElementById("signUp").addEventListener("submit", e => {
         e.preventDefault();
+        let storeItem = JSON.parse(localStorage.getItem("item"));
 
         checkInputForm();
         
-        if(checkInputForm() != false) {
+        if(checkInputForm() != false && storeItem != 0 && storeItem != null) {
             sendOrderDatas();
         } else {
             document.getElementById("signUp").reset();
@@ -109,8 +106,6 @@ function checkInputForm () {
     // Check address form
     let addressRegexp = new RegExp("^[0-9A-Za-zÀ-ú' ']{2,30}$");
     let validAddress = addressRegexp.test(document.getElementById("address").value);
-    console.log("adresse");
-    console.log(validAddress);
     
     // Check city form
     let cityRegexp = new RegExp("^[A-Za-zÀ-ú]{3,30}$");
@@ -227,9 +222,8 @@ function sendOrderDatas () {
         products: storeItemId
     };
     
-    console.log(orderInfo);
     orderInfoJSON = JSON.stringify(orderInfo);
-    console.log(orderInfoJSON);
+
     // Send itemId & customer form to server, then send customer to the validation page
     const sendToServer = fetch(`${apiURL}/api/cameras/order`, {
         method: "POST",
@@ -242,7 +236,6 @@ function sendOrderDatas () {
         }
         else (console.error(response.status))})
     .then(returnResponse => {
-        console.log(returnResponse);
         let storeOrderId = returnResponse.orderId;
         // Store the order id to localStorage
         localStorage.setItem("oderIdKey", JSON.stringify(storeOrderId));
