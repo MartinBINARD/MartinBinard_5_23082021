@@ -6,12 +6,11 @@
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #28**
+**Main branch - Commit #29**
 
 # Description
 
 - This website is a project to web developer course teached by [Openclassroom](https://openclassrooms.com/en/paths/141-web-developer)
-
 - The Front-end website is made from scratch, only API & images products are delivered. The customer can select different items & add it to its cart.
 - The server will respond an order id & the customer will see the total order price.
 
@@ -21,7 +20,7 @@
 
 # Change done
 
-- Rename main.js to common.js.
+- Rewrite falsy value in if condition before sending to server and add defer to javascript files.
 
 # WEBSITE LINK
 
