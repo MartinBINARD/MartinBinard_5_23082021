@@ -1,29 +1,27 @@
 # MartinBinard_5_23082021
+
 **Projet 5**
 
-***An e-commerce website called Orinoco***
+**_An e-commerce website called Orinoco_**
 
 ![logo-orinoco](./Front-end/public/img/Orinoco-logo-title.png)
 
-**Main branch - Commit #27**
+**Main branch - Commit #28**
 
 # Description
 
-* This website is a project to web developer course teached by [Openclassroom](https://openclassrooms.com/en/paths/141-web-developer)
+- This website is a project to web developer course teached by [Openclassroom](https://openclassrooms.com/en/paths/141-web-developer)
 
-* The Front-end website is made from scratch, only API & images products are delivered. The customer can select different items & add it to its cart.
-* The server will respond an order id & the customer will see the total order price.
+- The Front-end website is made from scratch, only API & images products are delivered. The customer can select different items & add it to its cart.
+- The server will respond an order id & the customer will see the total order price.
 
 # Main goals
 
-* Use Bootstrap 5, JS & call API.
+- Use Bootstrap 5, JS & call API.
 
 # Change done
 
-* Add conditions to prevent empty cart order sent to server into checkAndSendToServer().
-* Remove console.log().
-* Remove useless variables.
-* Add rounded class to img item in index.html.
+- Rename main.js to common.js.
 
 # WEBSITE LINK
 
@@ -31,19 +29,24 @@
 
 # How to run this website
 
-* You may experience heroku server hibernation when you first visit the website.
-* :pray: Please, take a time to reload multiples time the page to wake up the heroku server.
-* Then enjoy it !!! :call_me_hand:
+- You may experience heroku server hibernation when you first visit the website.
+- :pray: Please, take a time to reload multiples time the page to wake up the heroku server.
+- Then enjoy it !!! :call_me_hand:
 
-* Otherwise, you can clone the back-end repo & replace the apiURL by the following code :
+- Otherwise, you can clone the back-end repo & replace the apiURL by the following code :
+
 ```javascript
-let apiURL = 'http://localhost:3000';
+let apiURL = "http://localhost:3000";
 ```
-* Install depedencies :
+
+- Install depedencies :
+
 ```
 npm install
 ```
-* Launch the node.js server :
+
+- Launch the node.js server :
+
 ```
 node server.js
 ```

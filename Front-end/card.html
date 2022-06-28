@@ -1,67 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orinoco - boutique artisanale en ligne</title>
-    <link rel="icon" href="public/img/Orinoco-logo.png">
+    <link rel="icon" href="public/img/Orinoco-logo.png" />
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
     <!-- Loading font awesome icons -->
-    <script src="https://kit.fontawesome.com/5595c213a6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5595c213a6.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- homemade css -->
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
     <!-- JS display -->
     <script async src="public/js/api-config.js"></script>
-    <script async src="public/js/main.js"></script>
+    <script async src="public/js/common.js"></script>
     <script async src="public/js/card.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- HEADER -->
     <header>
-
-        <nav class="nav bg-dark">
-            <div class="container">
-                <ul class="nav justify-content-between">
-                    <li>
-                        <a href="index.html" class="navbar-brand d-flex orinoco-style text-white">
-                          <img src="public/img/Orinoco-logo.png" alt="Orinoco logo">
-                            Orinoco
-                        </a>
-                    </li>
-                    <li>
-                        <a href="cart-order.html" class="nav-link cart mt-1" id="cart-link">
-                          <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="border-orinoco"></div>
-
+      <nav class="nav bg-dark">
+        <div class="container">
+          <ul class="nav justify-content-between">
+            <li>
+              <a
+                href="index.html"
+                class="navbar-brand d-flex orinoco-style text-white"
+              >
+                <img src="public/img/Orinoco-logo.png" alt="Orinoco logo" />
+                Orinoco
+              </a>
+            </li>
+            <li>
+              <a
+                href="cart-order.html"
+                class="nav-link cart mt-1"
+                id="cart-link"
+              >
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="border-orinoco"></div>
     </header>
     <!-- MAIN -->
     <main>
       <!-- MODAL -->
-      <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div
+        class="modal fade"
+        id="cartModal"
+        tabindex="-1"
+        aria-labelledby="cartModalLabel"
+        aria-hidden="true"
+      >
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="cartModal">Produit ajouté au panier</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title" id="cartModal">
+                Produit ajouté au panier
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn fw-bold button-orinoco" data-bs-dismiss="modal">Continuer mes achats</button>
-              <a href='cart-order.html' class='btn fw-bold button-orinoco'>Commander</a>
+              <button
+                type="button"
+                class="btn fw-bold button-orinoco"
+                data-bs-dismiss="modal"
+              >
+                Continuer mes achats
+              </button>
+              <a href="cart-order.html" class="btn fw-bold button-orinoco"
+                >Commander</a
+              >
             </div>
           </div>
         </div>
       </div>
       <!-- MODAL END-->
-      <div class="d-flex align-items-stretch justify-content-center bg-dark py-5">
-        <div class="container my-3 py-3 rounded bg-light" style="max-width: 34rem;">
-          <a href="index.html" class="btn btn-sm fw-bold button-orinoco mb-5 mx-3">Retour</a>
+      <div
+        class="d-flex align-items-stretch justify-content-center bg-dark py-5"
+      >
+        <div
+          class="container my-3 py-3 rounded bg-light"
+          style="max-width: 34rem"
+        >
+          <a
+            href="index.html"
+            class="btn btn-sm fw-bold button-orinoco mb-5 mx-3"
+            >Retour</a
+          >
           <div class="card-fluid" id="main-content">
             <!-- CONTENT -->
           </div>
@@ -69,20 +112,39 @@
       </div>
     </main>
     <!-- FOOTER -->
-    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 bg-dark">
-        
-        <div class="border-orinoco mb-3"></div>
-        <div class="col-md-4 d-flex align-items-center ms-5">
-          <span class="text-white">&copy; 2021 <a class="text-decoration-none text-success" href="https://github.com/MartinBINARD">Martin</a></span>
-        </div>
-    
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-5">
-          <li class="ms-3"><a class="text-white" href="https://twitter.com/BinardMartin"><i class="fab fa-social fa-twitter"></i></a></li>
-          <li class="ms-3"><a class="text-white" href="https://github.com/MartinBINARD"><i class="fab fa-social fa-github"></i></a></li>
-        </ul>
+    <footer
+      class="d-flex flex-wrap justify-content-center align-items-center py-3 bg-dark"
+    >
+      <div class="border-orinoco mb-3"></div>
+      <div class="col-md-4 d-flex align-items-center ms-5">
+        <span class="text-white"
+          >&copy; 2021
+          <a
+            class="text-decoration-none text-success"
+            href="https://github.com/MartinBINARD"
+            >Martin</a
+          ></span
+        >
+      </div>
 
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-5">
+        <li class="ms-3">
+          <a class="text-white" href="https://twitter.com/BinardMartin"
+            ><i class="fab fa-social fa-twitter"></i
+          ></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-white" href="https://github.com/MartinBINARD"
+            ><i class="fab fa-social fa-github"></i
+          ></a>
+        </li>
+      </ul>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

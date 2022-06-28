@@ -1,117 +1,199 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orinoco - boutique artisanale en ligne</title>
-    <link rel="icon" href="public/img/Orinoco-logo.png">
+    <link rel="icon" href="public/img/Orinoco-logo.png" />
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
     <!-- Loading font awesome icons -->
-    <script src="https://kit.fontawesome.com/5595c213a6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/5595c213a6.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- homemade css -->
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
     <!-- JS display -->
     <script async src="public/js/api-config.js"></script>
-    <script async src="public/js/main.js"></script>
+    <script async src="public/js/common.js"></script>
     <script async src="public/js/cart-order.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- HEADER -->
     <header>
-
-        <nav class="nav bg-dark">
-            <div class="container">
-                <ul class="nav justify-content-between">
-                    <li>
-                        <a href="index.html" class="navbar-brand d-flex orinoco-style text-white">
-                            <img src="public/img/Orinoco-logo.png" alt="Orinoco logo">
-                            Orinoco
-                        </a>
-                    </li>
-                    <li>
-                        <a href="cart-order.html" class="nav-link cart mt-1" id="cart-link">
-                          <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="border-orinoco"></div>
-
+      <nav class="nav bg-dark">
+        <div class="container">
+          <ul class="nav justify-content-between">
+            <li>
+              <a
+                href="index.html"
+                class="navbar-brand d-flex orinoco-style text-white"
+              >
+                <img src="public/img/Orinoco-logo.png" alt="Orinoco logo" />
+                Orinoco
+              </a>
+            </li>
+            <li>
+              <a
+                href="cart-order.html"
+                class="nav-link cart mt-1"
+                id="cart-link"
+              >
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="border-orinoco"></div>
     </header>
     <!-- MAIN -->
     <main>
       <div class="d-flex align-items-center justify-content-center bg-dark">
         <div class="container my-5 py-5 rounded bg-light">
-            <a href="index.html" class="btn btn-sm fw-bold button-orinoco mb-2">Retour</a>
-            <div class="table-responsive-sm" id="cart-content">
-                <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th>Produit</th>
-                        <th>Option</th>
-                        <th>Quantité</th>
-                        <th>Supprimer</th>
-                        <th>Prix</th>
-                      </tr>
-                    </thead>
-                    <tbody id="cart-item">
-                      <!-- CART ITEM -->
-                    </tbody>
-                    <tfoot>
-                      <tr>
-                        <td colspan="3"></td>
-                        <th class="table-secondary">Total</th>
-                        <th class="table-secondary" id="total-order"></th>
-                      </tr>
-                    </tfoot>
-                </table>
-            </div>
+          <a href="index.html" class="btn btn-sm fw-bold button-orinoco mb-2"
+            >Retour</a
+          >
+          <div class="table-responsive-sm" id="cart-content">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Produit</th>
+                  <th>Option</th>
+                  <th>Quantité</th>
+                  <th>Supprimer</th>
+                  <th>Prix</th>
+                </tr>
+              </thead>
+              <tbody id="cart-item">
+                <!-- CART ITEM -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="3"></td>
+                  <th class="table-secondary">Total</th>
+                  <th class="table-secondary" id="total-order"></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </div>
       </div>
       <div class="d-flex align-items-stretch justify-content-center bg-dark">
         <div class="container my-5 py-5 rounded bg-light">
-        <!-- FORM -->
+          <!-- FORM -->
           <form class="row g-3 needs-validation" id="signUp">
             <div class="col-md-6">
               <label for="first-name" class="form-label">Prénom</label>
-              <input type="text" class="form-control" id="first-name" placeholder="Entrez votre prénom" required>
-              <div class="col-12 text-danger d-none" id="warning-first-name">Prénom incorrect, 3 caractères minimum. Les accents sont autorisés.</div>
+              <input
+                type="text"
+                class="form-control"
+                id="first-name"
+                placeholder="Entrez votre prénom"
+                required
+              />
+              <div class="col-12 text-danger d-none" id="warning-first-name">
+                Prénom incorrect, 3 caractères minimum. Les accents sont
+                autorisés.
+              </div>
             </div>
             <div class="col-md-6">
               <label for="last-name" class="form-label">NOM</label>
-              <input type="text" class="form-control" id="last-name" placeholder="Entrez votre nom" required>
-              <div class="col-12 text-danger d-none" id="warning-last-name">Nom incorrect, 3 caractères minimum. Les accents sont autorisés.</div>
+              <input
+                type="text"
+                class="form-control"
+                id="last-name"
+                placeholder="Entrez votre nom"
+                required
+              />
+              <div class="col-12 text-danger d-none" id="warning-last-name">
+                Nom incorrect, 3 caractères minimum. Les accents sont autorisés.
+              </div>
             </div>
             <div class="col-12">
               <label for="address" class="form-label">Adresse</label>
-              <input type="text" class="form-control" id="address" placeholder="N°, Rue, Appartement..." required>
-              <div class="col-12 text-danger d-none" id="warning-address">Adresse incorrecte, 2 caractères minimum. Les numéro, espaces et accents sont autorisés.</div>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="N°, Rue, Appartement..."
+                required
+              />
+              <div class="col-12 text-danger d-none" id="warning-address">
+                Adresse incorrecte, 2 caractères minimum. Les numéro, espaces et
+                accents sont autorisés.
+              </div>
             </div>
             <div class="col-md-6">
               <label for="city" class="form-label">Ville</label>
-              <input type="text" class="form-control" id="city" placeholder="Paris" required>
-              <div class="col-12 text-danger d-none" id="warning-city">Ville incorrecte, 3 caractères minimum. Les accents sont autorisés.</div>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                placeholder="Paris"
+                required
+              />
+              <div class="col-12 text-danger d-none" id="warning-city">
+                Ville incorrecte, 3 caractères minimum. Les accents sont
+                autorisés.
+              </div>
             </div>
             <div class="col-md-3">
               <label for="country" class="form-label">Pays</label>
-              <input type="text" class="form-control" id="country" placeholder="France" required>
-              <div class="col-12 text-danger d-none" id="warning-country">Pays incorrect, 3 caractères minimum. Les accents sont autorisés.</div>
+              <input
+                type="text"
+                class="form-control"
+                id="country"
+                placeholder="France"
+                required
+              />
+              <div class="col-12 text-danger d-none" id="warning-country">
+                Pays incorrect, 3 caractères minimum. Les accents sont
+                autorisés.
+              </div>
             </div>
             <div class="col-md-3">
               <label for="zipCode" class="form-label">Code postal</label>
-              <input type="text" class="form-control" id="zipCode" placeholder="75000" required>
-              <div class="col-12 text-danger d-none" id="warning-zip-code">Code postal incorrect. Le code postal doit contenir 5 chiffres sans espaces.</div>
+              <input
+                type="text"
+                class="form-control"
+                id="zipCode"
+                placeholder="75000"
+                required
+              />
+              <div class="col-12 text-danger d-none" id="warning-zip-code">
+                Code postal incorrect. Le code postal doit contenir 5 chiffres
+                sans espaces.
+              </div>
             </div>
             <div class="col-12">
               <label for="email" class="form-label">e-mail</label>
-              <input type="text" class="form-control" id="email" placeholder="adresse@email.com" required>
-              <div class="col-12 text-danger d-none" id="warning-email">Adresse mail incorrecte.</div>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="adresse@email.com"
+                required
+              />
+              <div class="col-12 text-danger d-none" id="warning-email">
+                Adresse mail incorrecte.
+              </div>
             </div>
             <div class="col-12">
-              <button class="btn fw-bold button-orinoco" type="submit" id="order">Commander</button>
+              <button
+                class="btn fw-bold button-orinoco"
+                type="submit"
+                id="order"
+              >
+                Commander
+              </button>
             </div>
           </form>
           <!-- FORM END -->
@@ -119,20 +201,39 @@
       </div>
     </main>
     <!-- FOOTER -->
-    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 bg-dark">
-        
-        <div class="border-orinoco mb-3"></div>
-        <div class="col-md-4 d-flex align-items-center ms-5">
-          <span class="text-white">&copy; 2021 <a class="text-decoration-none text-success" href="https://github.com/MartinBINARD">Martin</a></span>
-        </div>
-    
-        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-5">
-          <li class="ms-3"><a class="text-white" href="https://twitter.com/BinardMartin"><i class="fab fa-social fa-twitter"></i></a></li>
-          <li class="ms-3"><a class="text-white" href="https://github.com/MartinBINARD"><i class="fab fa-social fa-github"></i></a></li>
-        </ul>
+    <footer
+      class="d-flex flex-wrap justify-content-center align-items-center py-3 bg-dark"
+    >
+      <div class="border-orinoco mb-3"></div>
+      <div class="col-md-4 d-flex align-items-center ms-5">
+        <span class="text-white"
+          >&copy; 2021
+          <a
+            class="text-decoration-none text-success"
+            href="https://github.com/MartinBINARD"
+            >Martin</a
+          ></span
+        >
+      </div>
 
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-5">
+        <li class="ms-3">
+          <a class="text-white" href="https://twitter.com/BinardMartin"
+            ><i class="fab fa-social fa-twitter"></i
+          ></a>
+        </li>
+        <li class="ms-3">
+          <a class="text-white" href="https://github.com/MartinBINARD"
+            ><i class="fab fa-social fa-github"></i
+          ></a>
+        </li>
+      </ul>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
